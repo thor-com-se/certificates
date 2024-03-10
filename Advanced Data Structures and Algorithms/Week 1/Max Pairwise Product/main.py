@@ -1,10 +1,8 @@
 import sys
 import os
 
-# accept the number of tests as a command line parameter
-tests = int(sys.argv[1])
-# accept the parameter for the tests as a command line parameter
-n = int(sys.argv[2])
+tests = int(sys.argv[1])    # parameter for number of tests
+n = int(sys.argv[2])        # parameter used to generate tests
 
 for i in range(tests):
     print("Test #" + str(i+1))
@@ -24,7 +22,6 @@ for i in range(tests):
     with open('model.txt') as f: main = f.read()         
     print("Model solution: ", main)
 
-    # compare and break
     if model != main :
         break
 
