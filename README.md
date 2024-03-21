@@ -1,7 +1,7 @@
 <!-- omit in toc -->
 # Professional certificates
 
-- [Meta Front-End Developer Professional](#meta-front-end-developer-professional)
+- [Front-End Developer Professional (Meta)](#front-end-developer-professional-meta)
   - [Introduction to Front-End Development](#introduction-to-front-end-development)
   - [Programming with JavaScript](#programming-with-javascript)
   - [Version Control](#version-control)
@@ -12,8 +12,14 @@
   - [Front-End Developer Capstone](#front-end-developer-capstone)
   - [Coding Interview Preparation](#coding-interview-preparation)
 - [Advanced Data Structures and Algorithms (University of California, San Diego)](#advanced-data-structures-and-algorithms-university-of-california-san-diego)
+  - [Algorithmic Toolbox](#algorithmic-toolbox)
+  - [Data Structures](#data-structures)
+  - [Algorithms on Graphs](#algorithms-on-graphs)
+  - [Algorithms on Strings](#algorithms-on-strings)
+  - [Advanced Algorithms and Complexity](#advanced-algorithms-and-complexity)
+  - [Genome Assembly Programming Challenge](#genome-assembly-programming-challenge)
 
-## Meta Front-End Developer Professional
+## Front-End Developer Professional (Meta)
 
 ### Introduction to Front-End Development
 
@@ -94,3 +100,51 @@ Certificate: *Not yet issued*
 - 
 
 ## Advanced Data Structures and Algorithms (University of California, San Diego)
+
+### Algorithmic Toolbox
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Data Structures
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Algorithms on Graphs
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Algorithms on Strings
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Advanced Algorithms and Complexity
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Genome Assembly Programming Challenge
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
