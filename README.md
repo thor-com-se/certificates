@@ -18,7 +18,8 @@ with components, hooks, APIs, and testing. UX/UI design.
   - Fundamentals of websites, webpages, web servers, DOM
     - Website design with Bootstrap CSS and components
   - Fundamentals of web applications, application servers, React, React DOM and React Fiber Architecture
-    - Application design with components
+    - Dynamic vs. static content, Single Page Applications
+    - Application design with components and compontent hierarchy
 
 ## Advanced Data Structures and Algorithms
 
