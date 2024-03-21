@@ -1,27 +1,25 @@
+<!-- omit in toc -->
 # Professional certificates
 
-- [Professional certificates](#professional-certificates)
-  - [Front-End Developer Professional](#front-end-developer-professional)
-    - [Summary](#summary)
-    - [Contents](#contents)
-      - [Introduction to Front-End Development](#introduction-to-front-end-development)
-  - [Advanced Data Structures and Algorithms](#advanced-data-structures-and-algorithms)
-    - [Summary](#summary-1)
+- [Meta Front-End Developer Professional](#meta-front-end-developer-professional)
+  - [Introduction to Front-End Development](#introduction-to-front-end-development)
+  - [Programming with JavaScript](#programming-with-javascript)
+  - [Version Control](#version-control)
+  - [HTML and CSS in depth](#html-and-css-in-depth)
+  - [React Basics](#react-basics)
+  - [Advanced React](#advanced-react)
+  - [Principles of UX/UI Design](#principles-of-uxui-design)
+  - [Front-End Developer Capstone](#front-end-developer-capstone)
+  - [Coding Interview Preparation](#coding-interview-preparation)
+- [Advanced Data Structures and Algorithms (University of California, San Diego)](#advanced-data-structures-and-algorithms-university-of-california-san-diego)
 
-## Front-End Developer Professional
+## Meta Front-End Developer Professional
 
-Certificate issued by **Meta**
+### Introduction to Front-End Development
 
-**Status:** *Not yet complete*
+Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3
 
-### Summary
-
-JavaScript. Version control. HTML and CSS. Advanced React
-with components, hooks, APIs, and testing. UX/UI design.
-
-### Contents
-
-#### Introduction to Front-End Development
+**Contents**
 
 - Introduction to HTML, CSS, JavaScript, HTTP, FTP, DHCP, TCP, packets, bundling
 - Fundamentals of websites, webpages, web servers, DOM
@@ -31,13 +29,68 @@ with components, hooks, APIs, and testing. UX/UI design.
   - Dynamic vs. static content, Single Page Applications, caching, code splitting
   - Application design with components and compontent hierarchy
 
-## Advanced Data Structures and Algorithms
+### Programming with JavaScript
 
-Certificate issued by **University of California, San Diego**
+Certificate: *Not yet issued*
 
-**Status:** *Not yet complete*
+**Contents**
 
-### Summary
+- 
 
-Test-driven algorithm design. Dynamic programming. Advanced
-algorithms and data structures. Pattern matching.
+### Version Control
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### HTML and CSS in depth
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### React Basics
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Advanced React
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Principles of UX/UI Design
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Front-End Developer Capstone
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+### Coding Interview Preparation
+
+Certificate: *Not yet issued*
+
+**Contents**
+
+- 
+
+## Advanced Data Structures and Algorithms (University of California, San Diego)
