@@ -21,7 +21,13 @@
 
 ## Front-End Developer Professional (Meta)
 
+Description: https://www.coursera.org/professional-certificates/meta-front-end-developer
+
+Certificate: *Not yet issued*
+
 ### Introduction to Front-End Development
+
+Description: https://www.coursera.org/learn/introduction-to-front-end-development
 
 Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3
 
@@ -37,6 +43,8 @@ Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2
 
 ### Programming with JavaScript
 
+Description: https://www.coursera.org/learn/programming-with-javascript
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -44,6 +52,8 @@ Certificate: *Not yet issued*
 - 
 
 ### Version Control
+
+Description: https://www.coursera.org/learn/introduction-to-version-control
 
 Certificate: *Not yet issued*
 
@@ -53,6 +63,8 @@ Certificate: *Not yet issued*
 
 ### HTML and CSS in depth
 
+Description: https://www.coursera.org/learn/html-and-css-in-depth
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -60,6 +72,8 @@ Certificate: *Not yet issued*
 - 
 
 ### React Basics
+
+Description: https://www.coursera.org/learn/react-basics
 
 Certificate: *Not yet issued*
 
@@ -69,6 +83,8 @@ Certificate: *Not yet issued*
 
 ### Advanced React
 
+Description: https://www.coursera.org/learn/advanced-react
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -76,6 +92,8 @@ Certificate: *Not yet issued*
 - 
 
 ### Principles of UX/UI Design
+
+Description: https://www.coursera.org/learn/principles-of-ux-ui-design
 
 Certificate: *Not yet issued*
 
@@ -85,6 +103,8 @@ Certificate: *Not yet issued*
 
 ### Front-End Developer Capstone
 
+Description: https://www.coursera.org/learn/meta-front-end-developer-capstone
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -92,6 +112,8 @@ Certificate: *Not yet issued*
 - 
 
 ### Coding Interview Preparation
+
+Description: https://www.coursera.org/learn/coding-interview-preparation
 
 Certificate: *Not yet issued*
 
@@ -101,7 +123,13 @@ Certificate: *Not yet issued*
 
 ## Advanced Data Structures and Algorithms (University of California, San Diego)
 
+Description: https://www.coursera.org/specializations/data-structures-algorithms
+
+Certificate: *Not yet issued*
+
 ### Algorithmic Toolbox
+
+Description: https://www.coursera.org/learn/algorithmic-toolbox
 
 Certificate: *Not yet issued*
 
@@ -111,6 +139,8 @@ Certificate: *Not yet issued*
 
 ### Data Structures
 
+Description: https://www.coursera.org/learn/data-structures
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -118,6 +148,8 @@ Certificate: *Not yet issued*
 - 
 
 ### Algorithms on Graphs
+
+Description: https://www.coursera.org/learn/algorithms-on-graphs
 
 Certificate: *Not yet issued*
 
@@ -127,6 +159,8 @@ Certificate: *Not yet issued*
 
 ### Algorithms on Strings
 
+Description: https://www.coursera.org/learn/algorithms-on-strings
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -135,6 +169,8 @@ Certificate: *Not yet issued*
 
 ### Advanced Algorithms and Complexity
 
+Description: https://www.coursera.org/learn/advanced-algorithms-and-complexity
+
 Certificate: *Not yet issued*
 
 **Contents**
@@ -142,6 +178,8 @@ Certificate: *Not yet issued*
 - 
 
 ### Genome Assembly Programming Challenge
+
+Description: https://www.coursera.org/learn/assembling-genomes
 
 Certificate: *Not yet issued*
 
