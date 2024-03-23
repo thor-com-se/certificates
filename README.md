@@ -9,7 +9,7 @@
 <!-- omit in toc -->
 ### Description
 
-https://www.coursera.org/professional-certificates/meta-front-end-developer
+[https://www.coursera.org/professional-certificates/meta-front-end-developer](https://www.coursera.org/professional-certificates/meta-front-end-developer)
 
 <!-- omit in toc -->
 ### Certificate
@@ -36,7 +36,7 @@ https://www.coursera.org/professional-certificates/meta-front-end-developer
 <!-- omit in toc -->
 ### Description
 
-https://www.coursera.org/specializations/data-structures-algorithms
+[https://www.coursera.org/specializations/data-structures-algorithms](https://www.coursera.org/specializations/data-structures-algorithms)
 
 <!-- omit in toc -->
 ### Certificate
