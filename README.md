@@ -2,24 +2,21 @@
 # Professional certificates
 
 - [Front-End Developer Professional (Meta)](#front-end-developer-professional-meta)
-  - [Description](#description)
-  - [Certificate](#certificate)
-  - [Modules](#modules)
 - [Advanced Data Structures and Algorithms (University of California, San Diego)](#advanced-data-structures-and-algorithms-university-of-california-san-diego)
-  - [Description](#description-1)
-  - [Certificate](#certificate-1)
-  - [Modules](#modules-1)
 
 ## Front-End Developer Professional (Meta)
 
+<!-- omit in toc -->
 ### Description
 
 https://www.coursera.org/professional-certificates/meta-front-end-developer
 
+<!-- omit in toc -->
 ### Certificate
 
 *Not yet issued*
 
+<!-- omit in toc -->
 ### Modules
 
 | Name                                                                                                          | Learnings                                                                                             | Certificate (image)                                                                                                 | Certificate (link)                                                    |
@@ -36,14 +33,17 @@ https://www.coursera.org/professional-certificates/meta-front-end-developer
 
 ## Advanced Data Structures and Algorithms (University of California, San Diego)
 
+<!-- omit in toc -->
 ### Description
 
 https://www.coursera.org/specializations/data-structures-algorithms
 
+<!-- omit in toc -->
 ### Certificate
 
 *Not yet issued*
 
+<!-- omit in toc -->
 ### Modules
 
 | Name                                                                                                    | Learnings | Certificate (image) | Certificate (link) |
