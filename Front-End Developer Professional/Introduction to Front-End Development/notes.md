@@ -1,0 +1,7 @@
+- Introduction to HTML, CSS, JavaScript, HTTP, FTP, DHCP, TCP, packets, bundling
+- Fundamentals of websites, webpages, web servers, DOM
+  - Dependencies, frameworks, libraries
+  - Website design with box model, Bootstrap CSS (grid, breakpoints, infixes, modifiers)
+- Fundamentals of web applications, application servers, React, React DOM and React Fiber Architecture
+  - Dynamic vs. static content, Single Page Applications, caching, code splitting
+  - Application design with components and compontent hierarchy

@@ -1,0 +1,20 @@
+- Programming languages
+  - High-level languages (human languages) and low-level languages (machine languages, binary code), memory
+- JavaScript
+  - TypeScript (strongly-typed JavaScript) compiles down to JavaScript, Node.js on the server, jQuery library for cross-browser compatibility, React for dynamic websites
+  - Variables
+    - Data types (`string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `symbol`), operators (arithmetic, comparison, logical), comparison of value (`==`) vs. value and data type (`===`), concatenation through coercion (`string` type takes precedence), accumulation operator (`+=`)
+  - Node.js enables developers to use JavaScript outside the browser, in command lines and on servers
+- Conditionals (flow control) and Loops
+  - Conditional statements (`if`, `if {...} else {...}`, `else if {...}`, `switch`)
+    - Switch statements are useful when there are many possible values for the same variable, and they can have a default (`else`) or be exhaustive (covering all possible conditions)
+  - Loops (`for`, `while`, `nested`), counters (`i` for iterator)
+    - `for` loop
+      - Conditions: value (`var i=0`), count (`i<n` which can be any comparison), incrementor (`i++` which is synonymous with `i += 1`)
+      - Body: `{...}`
+    - `while` loop
+      - Conditions: count (`i<n`)
+      - Body: `{...}`
+      - Value is declared before loop, and incrementor is declared within loop
+    - Nested loops
+      - Outer loop typically uses variable `i` while inner loop uses variable `j`
