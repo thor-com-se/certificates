@@ -5,16 +5,69 @@
   - Variables
     - Data types (`string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `symbol`), operators (arithmetic, comparison, logical), comparison of value (`==`) vs. value and data type (`===`), concatenation through coercion (`string` type takes precedence), accumulation operator (`+=`)
   - Node.js enables developers to use JavaScript outside the browser, in command lines and on servers
-- Conditionals (flow control) and Loops
-  - Conditional statements (`if`, `if {...} else {...}`, `else if {...}`, `switch`)
-    - Switch statements are useful when there are many possible values for the same variable, and they can have a default (`else`) or be exhaustive (covering all possible conditions)
-  - Loops (`for`, `while`, `nested`), counters (`i` for iterator)
-    - `for` loop
-      - Conditions: value (`var i=0`), count (`i<n` which can be any comparison), incrementor (`i++` which is synonymous with `i += 1`)
-      - Body: `{...}`
-    - `while` loop
-      - Conditions: count (`i<n`)
-      - Body: `{...}`
-      - Value is declared before loop, and incrementor is declared within loop
-    - Nested loops
-      - Outer loop typically uses variable `i` while inner loop uses variable `j`
+  - Conditionals (flow control) and Loops
+    - Conditional statements (`if`, `if {...} else {...}`, `else if {...}`, `switch`)
+      - Switch statements are useful when there are many possible values for the same variable, and they can have a default (`else`) or be exhaustive (covering all possible conditions)
+    - Loops (`for`, `while`, `nested`), counters (`i` for iterator)
+      - `for` loop
+        - Conditions: value (`var i=0`), count (`i<n` which can be any comparison), incrementor (`i++` which is synonymous with `i += 1`)
+        - Body: `{...}`
+      - `while` loop
+        - Conditions: count (`i<n`)
+        - Body: `{...}`
+        - Value is declared before loop, and incrementor is declared within loop
+      - Nested loops
+        - Outer loop typically uses variable `i` while inner loop uses variable `j`
+  - Arrays, Objects and Functions
+    - Functions
+      - DRY (Don't Repeat Yourself) is the concept of reducing repetition through functions
+      - Function building (`function functionName(parameter) {...}`) and function calling (`functionName()`)
+      - Function parameters act as placeholders that make functions more flexible
+    - Arrays
+      - Group values, values in a sequence, values accessible by index
+      - A type of object with methods to extend (`push()`) and trim (`pop()`) trailing element 
+    - Objects
+      - A hierarchy of related variables
+      - Object literals (`objectName = {}`)
+      - Object properties (`objectName = {propertyName: value}`)
+      - Properties assigned directly in object literal, through dot notation (`objectName.propertyName = value`) or bracket notation (`objectName["propertyName"] = value`) as they act as key-value pairs where key is property name
+      - Properties accessed through dot notation (`objectName.propertyName`) or bracket notation (`objectName["propertyName"]`)
+      - Bracket notation can evaluate espressions when accessing an array element which means elements can be accessed by index (`objectName[index]`)
+      - Property value can be a function (`objectname.propertyName = function() {...}`)
+    - Mathematic object functions
+      - Number constants
+        - Pi (`Math.PI`), Euler's constant (`Math.E`), natural logarithm of 2 (`Math.LN2`)
+      - Rounding methods
+        - Round up to closest integer (`Math.ceil()`), round down to closest integer (`Math.floor()`), round up if decimal above .5 otherwise round down to closest integer (`Math.round()`), convert decimal to integer (`Math.trunc()`)
+      - Arithmetic and calculus methods
+        - To the power of (`Math.pow(a, b)`), square root of (`Math.sqrt(a)`), cube root of (`Math.cbrt(a)`), absolute value (`Math.abs(a)`), logarithms (`Math.log()`, `Math.log2()`, `Math.log10()`), minimum (`Math.min(a, b, c`), maximum (`Math.max(a, b, c)`), trigonometry (`Math.sin()`, `Math.cos()`, `Math.tan()`)
+      - Randomization
+        - Random decimal between 0 and 0.99 (`Math.random()`)
+    - Iterable data types
+      - Types such as `string` and `array` which can be iterated over
+      - Strings can be concatenated (`stringName.concat(stringName`), string elements accessed by index (`stringName.charAt(index)`), index of first occurrence of matching element in string (`stringName.indexOf("value")`), index of last occurrence of matching element in string (`stringName.lastIndexOf("value")`), string arrayized by matching sub-string (`stringName.split("value")`), string converted to upper case (`stringName.toUpperCase()`), string converted to lower case (`stringName.toLowerCase()`)
+      - Array and string length is accessible (`stringName.length` or `arrayName.length`)
+    - Typeof operator
+    - Evalutes parameter and returns data type (`typeof(variable)`) including functions and objects
+  - Error handling
+    - Programs continue to run despite bugs (unintended behavior) while errors are "thrown" and execution halts
+    - `SyntaxError` indicates that JavaScript does not understand the syntax of the code
+    - `TypeError` indicates that called methods do not exist on a type
+    - `ReferenceError` indicates that undeclared variables were referenced
+    - `RangeError` indicates that a method call was outside the range of values in a type
+    - `AggregateError` indicates 
+    - `Error` indicates ...
+    - `InternalError` indicates ...
+    - `URIError` indicates ...
+    - try-catch blocks are statements to throw and catch errors (`try { throw new Error() } catch(error) {...}`) to handle errors and prevent execution from halting
+      - Errors do not have to be thrown in `try {...}` to be caught by `catch(error) {...}` but throwing errors helps show what type of error it is
+      - Errors encountered halt execution of `try {...}` and initate execution of `catch(error) {...}`
+      - Errors thrown outside a try-catch block will halt execution
+    - Empty value types
+      - `Null` is a data type representing the intentional absence of a value
+      - `Undefined` is a data type used to declare a variable that does not yet have a value
+        - Automatically assigned to variables declared with no value
+        - Default return value of functions that have no `return` declared
+        - Throws a `ReferenceError` when an undeclared variable is referenced but not if the variable is declared with a value of type `Undefined`
+      - `Empty string` is a data type for a string variable with no contents
+    - Defensive programming means assuming data types passed to a function won't be correct and need to be validated to avoid execution halting
