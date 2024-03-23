@@ -25,9 +25,7 @@
 
 ### Introduction to Front-End Development
 
-[Description](https://www.coursera.org/learn/introduction-to-front-end-development) • [Learnings](Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/notes.md) • [Certificate](https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3)
-
-<img src="Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/certificate.png" width="100">
+[Description](https://www.coursera.org/learn/introduction-to-front-end-development) • [Learnings](Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/notes.md) • [Certificate (link)](https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3) • [Certificate (image)](Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/certificate.png)
 
 ### Programming with JavaScript
 
