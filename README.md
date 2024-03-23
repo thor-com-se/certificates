@@ -29,7 +29,7 @@ Certificate: <span style="color: red">Not yet issued</span>
 
 Description: https://www.coursera.org/learn/introduction-to-front-end-development
 
-Learnings: [Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/notes.md](Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/notes.md)
+Learnings: [Front-End Developer Professional/Introduction to Front-End Development/notes.md](Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/notes.md)
 
 Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3
 
@@ -39,7 +39,7 @@ Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2
 
 Description: https://www.coursera.org/learn/programming-with-javascript
 
-Learnings: [Front-End%20Developer%20Professional/Programming%20with%20JavaScript/notes.md](Front-End%20Developer%20Professional/Programming%20with%20JavaScript/notes.md)
+Learnings: [Front-End Developer Professional/Programming with JavaScript/notes.md](Front-End%20Developer%20Professional/Programming%20with%20JavaScript/notes.md)
 
 Certificate: <span style="color: red">Not yet issued</span>
 
