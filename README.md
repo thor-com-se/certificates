@@ -2,7 +2,7 @@
 # Professional certificates
 
 - [Front-End Developer Professional (Meta)](#front-end-developer-professional-meta)
-- [Advanced Data Structures and Algorithms (University of California, San Diego)](#advanced-data-structures-and-algorithms-university-of-california-san-diego)
+- [Data Structures and Algorithms (University of California, San Diego)](#data-structures-and-algorithms-university-of-california-san-diego)
 
 ## Front-End Developer Professional (Meta)
 
@@ -31,7 +31,7 @@ https://www.coursera.org/professional-certificates/meta-front-end-developer
 | [Front-End Developer Capstone](https://www.coursera.org/learn/meta-front-end-developer-capstone)              |                                                                                                                                                              |                                                                                                                                                   |                                                                                      |                                                                                                                                                                                                                                                                                                              |
 | [Coding Interview Preparation](https://www.coursera.org/learn/coding-interview-preparation)                   |                                                                                                                                                              |                                                                                                                                                   |                                                                                      |                                                                                                                                                                                                                                                                                                              |
 
-## Advanced Data Structures and Algorithms (University of California, San Diego)
+## Data Structures and Algorithms (University of California, San Diego)
 
 <!-- omit in toc -->
 ### Description
