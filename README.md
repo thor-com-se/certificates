@@ -32,6 +32,11 @@ Description: https://www.coursera.org/learn/introduction-to-front-end-developmen
 Certificate: https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3
 
 <details>
+  <summary>Certificate (image)</summary>
+  <img src="Front-End%20Developer%20Professional/Introduction%20to%20Front-End%20Development/certificate.png">
+</details>
+
+<details>
   <summary>Learnings</summary>
 
   - Introduction to HTML, CSS, JavaScript, HTTP, FTP, DHCP, TCP, packets, bundling
