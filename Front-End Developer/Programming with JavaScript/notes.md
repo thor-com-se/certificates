@@ -138,7 +138,7 @@
     - Rest operator can be used when destructuring an array to store the remaining elements with syntax `...` used as `const [a, b, c, ...d] = arrayName` where `d` is the remaining elements stored as a sub-array
       - Can be used in functions such as a tax function `function functionName(a, ...b) { return b.map(x => a * x)}` with call `functionName(1.1, 10, 20, 30, 40)`
       - Rest parameter must be the last parameter
-- JavaScript in the Browser
+- JavaScript in the browser
   - Modules (ES6) act independently meaning they can be added/removed/replaced as dependencies
     - Added in the browser HTML as `<script type="module">import ... from './...js'</script>`
     - Browsers block "cross-origin resource sharing" when attempting to access modules without a local/remote server
@@ -154,3 +154,30 @@
     - Event handler can be added to individual element rather than body
     - Event handler can added to individual element using HTML attributes such as `onclick="function"`
   - JSON (JavaScript Object Notation) is a stringified format of a JavaScript object literal which can be parsed directly into a JS object using `JSON.parse(jsonString)`
+- JavaScript environments
+  - Browser which provides a front-end
+  - Node.js provides JS outside a browser and thus can be used in the command line, a desktop application or a back-end server
+    - NPM package manager provides modules published on their websiter
+      - `npm init` in the command line generates a "package.json" file that describes NPM packages installed such that this file can be shared to automatically pull all dependencies for a project
+      - `npm i/install {package name}` adds a dependency to "package.json"
+      - `npm i/install` pulls all dependencies in "package.json"
+        - Packages can define their own dependencies which would also install
+- Testing
+  - Refactoring is making code more concise or faster by updating it without altering its functionality
+  - Red-green-refactor is a cycle of tests failing (red) to meet or passing (green) expectations and then being refactored or rewritten to pass a failing test
+  - Types of testing
+    - End-to-end testing (e2e) imitates how a user would interact with the product such that it is tested from one end to the other end, and the tester should not have to be a developer
+      - Tools are WebdriverJS, Protractor and Cypress
+    - Integration testing tests interaction between separate parts of the same system
+      - Tools are React testing library and Enzyme
+    - Unit testing tests the smallest unit of testable code that can be executed in isolation, such as a function
+  - Jest is a testing framework for JS and frameworks
+    - Code coverage is a measure of what percentage of code is covered by tests for at least one expectation
+    - Mocking is the concept of separating code from its dependencies by "mocking" them, such as when a database dependency is "mocked" in isolation on the client side, as this avoids bottlenecks on the front-end while the back-end is developed
+    - Snapshot testing verifies that there are no regressions in the DOM after code changes
+  - Writing tests in Jest
+    - Jest provides the method `expect(function).toBe(expectedReturn)` to test if a function returns what is expected
+    - Jest provides the `test` method which takes a descripitive string for the purpose of the test and a function to execute which could be `expect`
+  - Test-driven development (TDD) is the process of writing expectations for a passing test before writing the code to be tested, which sets a benchmark for what the code must do in order to succesfully implement the requirements from a specification
+    - This can start with testing for the existence of a function with a Jest unit test of `expect(function).toBeDefined()`
+    - There are many Jest methods that can test elements of a unit, including `expect(console.log).toBeCalled()` to test for console.log messages
