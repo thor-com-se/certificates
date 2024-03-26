@@ -1,73 +1,156 @@
 - Programming languages
   - High-level languages (human languages) and low-level languages (machine languages, binary code), memory
-- JavaScript
-  - TypeScript (strongly-typed JavaScript) compiles down to JavaScript, Node.js on the server, jQuery library for cross-browser compatibility, React for dynamic websites
-  - Variables
-    - Data types (`string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `symbol`), operators (arithmetic, comparison, logical), comparison of value (`==`) vs. value and data type (`===`), concatenation through coercion (`string` type takes precedence), accumulation operator (`+=`)
-  - Node.js enables developers to use JavaScript outside the browser, in command lines and on servers
-  - Conditionals (flow control) and Loops
-    - Conditional statements (`if`, `if {...} else {...}`, `else if {...}`, `switch`)
-      - Switch statements are useful when there are many possible values for the same variable, and they can have a default (`else`) or be exhaustive (covering all possible conditions)
-    - Loops (`for`, `while`, `nested`), counters (`i` for iterator)
-      - `for` loop
-        - Conditions: value (`var i=0`), count (`i<n` which can be any comparison), incrementor (`i++` which is synonymous with `i += 1`)
-        - Body: `{...}`
-      - `while` loop
-        - Conditions: count (`i<n`)
-        - Body: `{...}`
-        - Value is declared before loop, and incrementor is declared within loop
-      - Nested loops
-        - Outer loop typically uses variable `i` while inner loop uses variable `j`
-  - Arrays, Objects and Functions
-    - Functions
-      - DRY (Don't Repeat Yourself) is the concept of reducing repetition through functions
-      - Function building (`function functionName(parameter) {...}`) and function calling (`functionName()`)
-      - Function parameters act as placeholders that make functions more flexible
-    - Arrays
-      - Group values, values in a sequence, values accessible by index
-      - A type of object with methods to extend (`push()`) and trim (`pop()`) trailing element 
-    - Objects
-      - A hierarchy of related variables
-      - Object literals (`objectName = {}`)
-      - Object properties (`objectName = {propertyName: value}`)
-      - Properties assigned directly in object literal, through dot notation (`objectName.propertyName = value`) or bracket notation (`objectName["propertyName"] = value`) as they act as key-value pairs where key is property name
-      - Properties accessed through dot notation (`objectName.propertyName`) or bracket notation (`objectName["propertyName"]`)
-      - Bracket notation can evaluate espressions when accessing an array element which means elements can be accessed by index (`objectName[index]`)
-      - Property value can be a function (`objectname.propertyName = function() {...}`)
-    - Mathematic object functions
-      - Number constants
-        - Pi (`Math.PI`), Euler's constant (`Math.E`), natural logarithm of 2 (`Math.LN2`)
-      - Rounding methods
-        - Round up to closest integer (`Math.ceil()`), round down to closest integer (`Math.floor()`), round up if decimal above .5 otherwise round down to closest integer (`Math.round()`), convert decimal to integer (`Math.trunc()`)
-      - Arithmetic and calculus methods
-        - To the power of (`Math.pow(a, b)`), square root of (`Math.sqrt(a)`), cube root of (`Math.cbrt(a)`), absolute value (`Math.abs(a)`), logarithms (`Math.log()`, `Math.log2()`, `Math.log10()`), minimum (`Math.min(a, b, c`), maximum (`Math.max(a, b, c)`), trigonometry (`Math.sin()`, `Math.cos()`, `Math.tan()`)
-      - Randomization
-        - Random decimal between 0 and 0.99 (`Math.random()`)
-    - Iterable data types
-      - Types such as `string` and `array` which can be iterated over
-      - Strings can be concatenated (`stringName.concat(stringName`), string elements accessed by index (`stringName.charAt(index)`), index of first occurrence of matching element in string (`stringName.indexOf("value")`), index of last occurrence of matching element in string (`stringName.lastIndexOf("value")`), string arrayized by matching sub-string (`stringName.split("value")`), string converted to upper case (`stringName.toUpperCase()`), string converted to lower case (`stringName.toLowerCase()`)
-      - Array and string length is accessible (`stringName.length` or `arrayName.length`)
-    - Typeof operator
-    - Evalutes parameter and returns data type (`typeof(variable)`) including functions and objects
-  - Error handling
-    - Programs continue to run despite bugs (unintended behavior) while errors are "thrown" and execution halts
-    - `SyntaxError` indicates that JavaScript does not understand the syntax of the code
-    - `TypeError` indicates that called methods do not exist on a type
-    - `ReferenceError` indicates that undeclared variables were referenced
-    - `RangeError` indicates that a method call was outside the range of values in a type
-    - `AggregateError` indicates 
-    - `Error` indicates ...
-    - `InternalError` indicates ...
-    - `URIError` indicates ...
-    - try-catch blocks are statements to throw and catch errors (`try { throw new Error() } catch(error) {...}`) to handle errors and prevent execution from halting
-      - Errors do not have to be thrown in `try {...}` to be caught by `catch(error) {...}` but throwing errors helps show what type of error it is
-      - Errors encountered halt execution of `try {...}` and initate execution of `catch(error) {...}`
-      - Errors thrown outside a try-catch block will halt execution
-    - Empty value types
-      - `Null` is a data type representing the intentional absence of a value
-      - `Undefined` is a data type used to declare a variable that does not yet have a value
-        - Automatically assigned to variables declared with no value
-        - Default return value of functions that have no `return` declared
-        - Throws a `ReferenceError` when an undeclared variable is referenced but not if the variable is declared with a value of type `Undefined`
-      - `Empty string` is a data type for a string variable with no contents
-    - Defensive programming means assuming data types passed to a function won't be correct and need to be validated to avoid execution halting
+  - JavaScript
+    - TypeScript (strongly-typed JavaScript) compiles down to JavaScript, Node.js on the server, jQuery library for cross-browser compatibility, React for dynamic websites
+    - Variables
+      - Data types (`string`, `number`, `boolean`, `null`, `undefined`, `BigInt`, `symbol`), operators (arithmetic, comparison, logical), comparison of value (`==`) vs. value and data type (`===`), concatenation through coercion (`string` type takes precedence), accumulation operator (`+=`)
+    - Node.js enables developers to use JavaScript outside the browser, in command lines and on servers
+    - Conditionals (flow control) and Loops
+      - Conditional statements (`if`, `if {...} else {...}`, `else if {...}`, `switch`)
+        - Switch statements are useful when there are many possible values for the same variable, and they can have a default (`else`) or be exhaustive (covering all possible conditions)
+      - Loops (`for`, `while`, `nested`), counters (`i` for iterator)
+        - `for` loop
+          - Conditions: value (`var i=0`), count (`i<n` which can be any comparison), incrementor (`i++` which is synonymous with `i += 1`)
+          - Body: `{...}`
+        - `while` loop
+          - Conditions: count (`i<n`)
+          - Body: `{...}`
+          - Value is declared before loop, and incrementor is declared within loop
+        - Nested loops
+          - Outer loop typically uses variable `i` while inner loop uses variable `j`
+    - Arrays, Objects and Functions
+      - Functions
+        - DRY (Don't Repeat Yourself) is the concept of reducing repetition through functions
+        - Function building (`function functionName(parameter) {...}`) and function calling (`functionName()`)
+        - Function parameters act as placeholders that make functions more flexible
+        - Default parameters can be declared by assigning values to the parameters in a function declaration
+      - Arrays
+        - Group values, values in a sequence, values accessible by index
+        - A type of object with methods to extend (`push()`) and trim (`pop()`) trailing element 
+      - Objects
+        - A hierarchy of related variables
+        - Object literals (`objectName = {}`)
+        - Object properties (`objectName = {propertyName: value}`)
+        - Properties assigned directly in object literal, through dot notation (`objectName.propertyName = value`) or bracket notation (`objectName["propertyName"] = value`) as they act as key-value pairs where key is property name
+        - Properties accessed through dot notation (`objectName.propertyName`) or bracket notation (`objectName["propertyName"]`)
+        - Bracket notation can evaluate espressions when accessing an array element which means elements can be accessed by index (`objectName[index]`)
+        - Property value can be a function (`objectname.propertyName = function() {...}`)
+      - Mathematic object functions
+        - Number constants
+          - Pi (`Math.PI`), Euler's constant (`Math.E`), natural logarithm of 2 (`Math.LN2`)
+        - Rounding methods
+          - Round up to closest integer (`Math.ceil()`), round down to closest integer (`Math.floor()`), round up if decimal above .5 otherwise round down to closest integer (`Math.round()`), convert decimal to integer (`Math.trunc()`)
+        - Arithmetic and calculus methods
+          - To the power of (`Math.pow(a, b)`), square root of (`Math.sqrt(a)`), cube root of (`Math.cbrt(a)`), absolute value (`Math.abs(a)`), logarithms (`Math.log()`, `Math.log2()`, `Math.log10()`), minimum (`Math.min(a, b, c`), maximum (`Math.max(a, b, c)`), trigonometry (`Math.sin()`, `Math.cos()`, `Math.tan()`)
+        - Randomization
+          - Random decimal between 0 and 0.99 (`Math.random()`)
+      - Iterable data types
+        - Types such as `string` and `array` which can be iterated over
+        - Strings can be concatenated (`stringName.concat(stringName`), string elements accessed by index (`stringName.charAt(index)`), index of first occurrence of matching element in string (`stringName.indexOf("value")`), index of last occurrence of matching element in string (`stringName.lastIndexOf("value")`), string arrayized by matching sub-string (`stringName.split("value")`), string converted to upper case (`stringName.toUpperCase()`), string converted to lower case (`stringName.toLowerCase()`)
+        - Array and string length is accessible (`stringName.length` or `arrayName.length`)
+      - Typeof operator
+      - Evalutes parameter and returns data type (`typeof(variable)`) including functions and objects
+    - Error handling
+      - Programs continue to run despite bugs (unintended behavior) while errors are "thrown" and execution halts
+      - `SyntaxError` indicates that JavaScript does not understand the syntax of the code
+      - `TypeError` indicates that called methods do not exist on a type
+      - `ReferenceError` indicates that undeclared variables were referenced
+      - `RangeError` indicates that a method call was outside the range of values in a type
+      - try-catch blocks are statements to throw and catch errors (`try { throw new Error() } catch(error) {...}`) to handle errors and prevent execution from halting
+        - Errors do not have to be thrown in `try {...}` to be caught by `catch(error) {...}` but throwing errors helps show what type of error it is
+        - Errors encountered halt execution of `try {...}` and initate execution of `catch(error) {...}`
+        - Errors thrown outside a try-catch block will halt execution
+      - Empty value types
+        - `Null` is a data type representing the intentional absence of a value
+        - `Undefined` is a data type used to declare a variable that does not yet have a value
+          - Automatically assigned to variables declared with no value
+          - Default return value of functions that have no `return` declared
+          - Throws a `ReferenceError` when an undeclared variable is referenced but not if the variable is declared with a value of type `Undefined`
+        - `Empty string` is a data type for a string variable with no contents
+      - Defensive programming means assuming data types passed to a function won't be correct and need to be validated to avoid execution halting
+    - Recursion is calling a function inside itself
+    - Scoping controls the accessibility of variables/properties/methods
+      - Scopes can be global or local to a function
+      - Scope chain refers to the way local scope of a function refers to the global scope such that when the function is called in a local scope its local scope chains to the global scope
+      - Block scope (added in ES6 JS) deliminates local scope outside functions
+    - Variable declaration (`var`, `let`, `const`)
+      - `var` can be accessed before declaration, can be redeclared (`variableName = value`)
+      - `let` can't be accessed before declaration, can be declared without value (value type `undefined`), can only be redeclared from `undefined`
+      - `const` can't be accessed before declaration, can't be redeclared
+- Programming paradigms
+  - Functional programming (FP)
+    - Separation of data and functions as data can exist outside functions
+    - Data should be passed to function which should return new value that is stored and used outside the function
+    - Calling functions inside other functions is an important part of functional programming
+    - First-class functions
+      - Function type acting as a value making it possible to assign it as a function parameter
+    - Higher-order function
+      - Accepts other function as argument and/or returns function
+    - Pure functions
+      - Output/return should be predictable such that the same parameters always have the same result (no randomization such as `Math.random()`)
+      - No side-effects allowed meaning no changes should be made by the function outside its local scope (including no browser API calls)
+  - Object-oriented programming (OOP)
+    - Combines both data and functions into objects
+    - Methods of objects act on their own data
+    - The `this` alias can be used in Objects to refer to the Object inside the Object
+    - Class (`class ClassName {...}`) is an Object template with a Constructor function (`constructor(parameter) { this.parameter = value }`), which is used when instantiating an Object from the Class, and methods declared without the `function` prefix (`functionName(parameter) {...}`)
+      - Classes are instantiated with syntax: `var/let/const variableName = new ClassName()`
+    - Objects exist in a hierarchal structure where the "super class" is the Object class such that new Objects can be created using the class method `Object.create(ClassName)`
+    - Principles of OOP
+      - Inheritance is the principle of sub-classes inherit properties of the parent/base class (super class)
+        - Classes can be extended in JavaScript upon declaration to inherit from the base (`class ChildClass extens ParentClass {...}`)
+      - Encapsulation is the principle of code (such as Class methods) having a predictable outcome without requiring the user to investigate the implementation
+      - Abstraction is the principle of generalizing code to the extent possible such that the same code can be used in multiple cases for the same generic purpose
+      - Polymorphism is the principle of the same code taking on multiple purposes which is achieving by constructing code such that its action is context-dependent (which can be achieved by restructuring code to pass around data types)
+    - Not all "native objects" in JavaScript (Math, Date, Object, Function, Boolean, Symbol, Array, Map, Set, Promise, JSON) have a Constructor function such as `Math` which acts as a static object and thus `new` can't be used on it
+    - Objects constructed using `new` are not equal in type to object literals (such as `new String("...")` vs `"..."`)
+    - Classes can also be declared with a custom constructor using `function ClassName(parameter) { this.propertyName = value; this.propertyName = function() {...} }`
+    - Regular expression instances are constructed using `new RegExp`
+    - `super(parameters)` can be used in the Constructor of a sub-class to delimit inheritance of parameters from the parent class
+    - `super.functionName` can be used in methods of a sub-class to reference methods from the parent class such that the sub-class can override methods of the parent class while maintaining functionality
+    - Inheritance can also be achieved by using a Class inside the construction of another Class
+    - De-structuring extracts part of an object or array into a new object or array such as `let {name} = Person` where name is `Person.name`
+    - "For of" loops can be constructed to iterate over elements of arrays or objects
+      - The syntax for "for of" loops is `for (var element of arrayName) {}`
+      - Objects can be iterated with "for in" to iterate over the properties and super properties of an object
+        - Object methods (`Object.keys()`, `Object.values()`, `Object.entries()`) arrayize an object to make it iterable through a "for of" loop such as `for (const key of Object.keys(objectName)) {}` where the element value would be accessed in the curly brackets using `objectName[key]`
+    - Template literals (ES6)
+      - Strings that enable string interpolation through the use of `${variable}` inside backticks
+      - Multi-line by nature
+    - Other common data structures
+      - Arrays are collections with automatically indexed elements
+        - Array methods include:
+        - `arrayName.forEach(function(x, i) {})` applies a function to each item in an array
+        - `arrayName.filter(function(x) {})` returns an array of the subset of items that return true
+      - Maps are like Objects where the keys can only be strings or symbols such that a Hash function can store the Map in a Hash table
+        - Map does not inherit (no prototype) and as such can be iterated over directly
+        - Instantiated using `new Map()`
+        - Values are accessed using `mapName.get(i)`
+      - Sets are collections where each item must be unique
+        - Instantiated using `new Set()`
+    - Spread operator (ES6) has syntax `...` which spreads out an array into separate arguments for purposes such as a function call (`functionName(...arrayName)`)
+      - Concatenate arrays using `[...arrayName1, ...arrayName2]`
+      - Add elements to array using `[...arrayName, value]`
+      - Convert string to array using `[...stringName]`
+      - Copy array using `const arrayName2 = [...arrayName1]`
+      - Join objects using `[...objectName1, ...objectName2]`
+      - Copy object using `const objectName2 = {...objectName1}`
+    - Rest operator can be used when destructuring an array to store the remaining elements with syntax `...` used as `const [a, b, c, ...d] = arrayName` where `d` is the remaining elements stored as a sub-array
+      - Can be used in functions such as a tax function `function functionName(a, ...b) { return b.map(x => a * x)}` with call `functionName(1.1, 10, 20, 30, 40)`
+      - Rest parameter must be the last parameter
+- JavaScript in the Browser
+  - Modules (ES6) act independently meaning they can be added/removed/replaced as dependencies
+    - Added in the browser HTML as `<script type="module">import ... from './...js'</script>`
+    - Browsers block "cross-origin resource sharing" when attempting to access modules without a local/remote server
+  - DOM manipulation is possible because the HTML document is automatically built in JavaScript as an Object
+    - Elements tab provides GUI access to the DOM
+    - Console tab provides JavaScript access to the DOM as `document` with <body> as `document.body`
+  - JavaScript selectors
+    - `document.querySelector('p')` returns the first matching element
+    - `document.querySelectorAll('p')` returns all matching elements
+    - `document.getElementById('id')` returns element matching ID
+    - `document.getElementsByClassName('txt')` returns all elements by matching class
+  - Event handling is achieved through "listeners" added as `document.body.addEventListener('listenerType', function)`
+    - Event handler can be added to individual element rather than body
+    - Event handler can added to individual element using HTML attributes such as `onclick="function"`
+  - JSON (JavaScript Object Notation) is a stringified format of a JavaScript object literal which can be parsed directly into a JS object using `JSON.parse(jsonString)`
