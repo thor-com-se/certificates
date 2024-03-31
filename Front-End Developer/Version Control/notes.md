@@ -1,0 +1,27 @@
+- Version control is a system that records and tracks file changes
+  - Provides access to history
+  - Provides ability to revert changes and roll back to previous version
+  - Files can be added, modified, and removed
+  - Files have a revision history, identity
+  - Benefits include revision history, identity, collaboration, automation and efficiency
+    - Revision history provides a date for changes and way to roll back to an older version or revert specific changes (who, when, and what)
+    - Identity shows who is responsible for making or approving a change
+    - Collaboration is improved by tracking which changes have been made relative to the plan for which changes need to be made
+      - Code is peer reviewed when it is ready to be implemented
+    - Efficiency is achieved through an agile approach to development, wherein iterations of changes are planned for sprints of i.e. 2 weeks and then reviewed and the plan continously reassessed
+  - DevOps (Developer Operations) is a set of practices, philopsohies and tools that increase the ability to deliver applications in high quality and velocity
+- Types of version control systmems
+  - Centralized systems (VCS) use a client-server model where the server has the source version of a project and the client versions are clones that require all changes to contact the server
+  - Distributed systems (DVCS) use a client-server model where both the server and client have the source version of a project and changes can be made to the client and then pushed to the server later
+- Workflows for version control
+  - Continuous Integration (CI) is the process of automating integration of code changes by automatically compiling the project source code and running tests to guard against merge conflicts 
+  - Continuous Delivery is an extension of CI whereby compiled project source code is also automatically packaged and delivered
+  - Continuous Deployment is an extension of Continuous Delivery whereby packaged code is deployed and tested in a safe environment before being delivered to the release environment
+- Development environments are commonly: developer, test, quality assurance, staging, production
+  - The staging environment should match production but be separate and can be created using snapshots of the production environment
+    - Useful for new feature rollout, testing, migrations, configuration
+  - The production environment is live meaning it is used by users
+    - If rollouts to production have not been througougly tested they can cause downtime which affects revenue, create security vulnerabilities, and damage the reputation of the company
+- Git
+  - Commands
+    - `git blame` returns the identity of who made a change
