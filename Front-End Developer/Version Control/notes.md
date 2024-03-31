@@ -22,6 +22,29 @@
     - Useful for new feature rollout, testing, migrations, configuration
   - The production environment is live meaning it is used by users
     - If rollouts to production have not been througougly tested they can cause downtime which affects revenue, create security vulnerabilities, and damage the reputation of the company
+- The command line provides text-based human-computer interaction
+  - Unix commands
+    - `cd [folder name]` changes directory
+      - Folder names can be provided as a relative path from the current directory or an absolute path from the disk
+    - `cd ..` changes directory to parent of current folder
+    - `ls` ouputs the contents of the current directory
+    - `touch [file name].[file extension]` creates a new empty file
+    - `mv [file name] [folder name]` moves a file in the current directory to another directory
+    - `mkdir [folder name]` creates a new empty folder
+    - `history` ouputs the history of recently used commands
+    - `man [command]` ouputs the manual for the given command
+    - Flags modify commands to provide input or output a value such as `[command] --help` for instructions
+    - Pipe (`[command] | [command]`) makes it possible to pass the output of a command as input to another command
+      - Example "Combined word count in two text files": `cat [file name] [file name] | wc -w`
+    - Redirection of output redirects it directly to a target
+      - Standard input (`[output target] < [input source]`)
+      - Standard output (`[input source] > [output target]`)
+      - Standard error (`[input source] 2> [output target]`)
+      - Standard output and error (`[input source] > [output target] 2>&1`)
+    - Grep (global regular expression print) searches a text file for regular expression matches (`grep [expression] [file name]`)
+      - `grep -i [expression] [filename]` ignores case sensitivity
+      - `grep -w [expression] [filename]` outputs an exact match
+      - This can be combined with `ls` to filter directory files with `ls [directory name] | grep [expression]`
 - Git
   - Commands
-    - `git blame` returns the identity of who made a change
+    - `git blame` ouputs the identity of who made a change
