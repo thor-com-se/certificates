@@ -45,6 +45,33 @@
       - `grep -i [expression] [filename]` ignores case sensitivity
       - `grep -w [expression] [filename]` outputs an exact match
       - This can be combined with `ls` to filter directory files with `ls [directory name] | grep [expression]`
-- Git
-  - Commands
-    - `git blame` ouputs the identity of who made a change
+- Git is a distributed version control system
+  - Git workflow
+    - Modified is when a file has been changed
+    - Staged is when a modified file has been added to .git with `git add`
+    - Committed is when a modified file has been locally committed to the branch of a repository with `git commit`
+  - Branches make it possible to work on the same repository and commit staged changes without directly affecting the repository until the branched changes are merged in
+  - Forking is another workflow than branching, wherein the entire repository is cloned rather than a branch being cloned into a parallel branch, and pull requests will have to merge into the original repository instead of a branch
+  - Pull requests compare branch changes to changes made to the repository since the branch was created, to guard against merge conflicts. Requests are peer reviewed by other authors on the repository with approval permissions
+  - `git init` initializes a .git file in the current directory
+  - `git remote add origin [remote .git file URL]` adds a remote origin to the local .git
+  - `git checkout -B [branch name]/[subbranch name]` switches from the main branch of a repository to a new branch which is commonly a "feature" branch such as "feature/[feature name]"
+  - `git commit -m "[commit message]"` commits any staged files
+  - `git push -u origin [branch path]` pushes the changes made to files (but not all the files) on the branch to the remote origin. If there are no merge conflicts these changes can be auto-merged on the remote server
+  - `git pull` retrieves changes on the remote server to the local .git and updates the cloned files
+  - `git branch` outputs the name of the current branch
+  - `git status` outputs the status of the git workflow
+  - `git blame` ouputs the identity of who made a change
+    - `git blame [file name]` outputs all changes made to a specific file with the commit ID, date, and author name
+    - `git blame -L [first line number],[last line number] [file name]` outputs changes made between specific line numbers
+  - `git clone [HTTPS URL of .git file]` clones a respository from the server to the client
+  - Rebasing attempts to merge two commits and raises a merge conflict when this requires attention from the authors
+  - `git log --merge` outputs merge conflicts
+    - `git log --pretty=oneline` outputs all commits prettified
+    - `git log -p [ID from git blame change]` outputs the changelog for a specific change
+  - `git diff` can output the difference between two commits causing a merge conflict, similar to `status` but with specific changes
+    - `git diff HEAD [file name]` outputs the changes for a specific file
+    - `git diff [branch name] [branch name]/[subbranch name]` compares changes between two branches such as "main" and "feature/..."
+  - "HEAD" is a part of the .git file that references the branch and modified files on that branch
+    - This ID changes when another branch is checked out
+- GitHub is a cloud-based hosting service that provides a GUI for collaborating through git
