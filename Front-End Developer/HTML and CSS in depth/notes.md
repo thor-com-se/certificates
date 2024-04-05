@@ -1,0 +1,37 @@
+- HTML is a document describing structured information
+  - Semantic tags describe content such that it is searchable and accessible (to screen readers)
+    - Basic HTML tags like `<h1>` are semantic
+    - Non-formatting semantic tags include `<header>`, `<main>`, `<footer>`, `<nav>`, `<article>`, `<section>` etc.
+      - It is common to provide `<header>` links wrapped in an unordered list `<ul>`
+      - The `<article>` tag is used for "complete, self-contained, and independently distributable" information
+        - The `<header>` and `<main>` tags should be used within `<article>`
+        - The `<section>` tag can be used within the `<main>` tag nested in `<article>`
+          - A heading tag like `<h1>` should be used within `<section>`
+  - Search Engine Optimization (SEO) is the process of improving search results for a website through changes to content, semantics and delivery
+    - Search engines analyze the content and semantics of a website as well as any websites referenced through `href` and rank the result
+  - Meta tags define metadata (data about other data) about a webpage
+    - Adding `alt` attributes to `<img>` tags help both with accessibility and SEO ranking
+    - Metadata is added in the `<header>` with `<meta>` tags containing the attributes `name` and `content`
+      - `name` is the type of metadata, and can be any string but should ideally meet a standard
+        - The `name="robots"` type can be used in conjuction with comma-delimited content to instruct search engines and bots on what content to index/follow or not index/follow
+          - The `name="googlebot"` type can be used for Google with content such as `"notranslate"` to disable translation
+        - The `name="viewport"` type can be used to provide a responsive device-based design and improve the SEO ranking
+        - The `name="keyword"` type should NOT be used as one major search engine labels these webpages as spam
+      - `content` is the value for the type of metadata
+      - `<meta charset="UTF-8">` sets the encoding for the webpage
+      - `<meta http-equiv="">` simulates HTTP response headers
+    - Facebook's Open Graph Protocol standardizes the use of metadata to provide information to link previews
+      - Meta tags use the `property` attribute instead of `name` and each type starts with "og:" such as `property="og:image"` for the image preview of the website link
+        - The `property="og:type"` attribute is important because it identifies the category of the link
+      - Before this standard, and when it's not used, web crawlers will pick the most likely information and media to use in the link preview
+- CSS is a stylesheet language that compliments HTML by improving its look and layout
+  - Can exist separatedly from an HTML document
+  - Media queries
+  - Box-sizing
+  - Multiple backgrounds
+  - Border images
+  - Text shadows
+  - Transformations and transitions
+- W3C manages the specifications for web standards like HTML and CSS
+  - They added media tags, responsive design, form input tags, validation features, text editing and spellchecking
+- Layouts commonly used for websites include top navigation bar layout, carousel layout, blog layout, dashboard layout
