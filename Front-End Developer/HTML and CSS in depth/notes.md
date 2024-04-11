@@ -71,6 +71,30 @@
         - `input:focus:invalid` applies a style when data is invalid and an input is selected
     - As browsers and operating systems do not have a standard for rendering forms, CSS can be utilized to prevent inconsistencies
   - Media elements
+    - The `<video>` tag can be used to render video
+      - The `width` and `height` attributes control how the video is rendered
+      - The `controls` attribute renders video player controls
+      - The `<source>` tag is nested inside `<video>` with the attribute `src` and `type`
+        - The `src` attribute should have a value corresponding to the video path
+        - The `type` attribute shoudl have a value corresponding to the file type `"video/mp4"`, `"video/ogg"` or `"video/webm"`
+    - The `<audio>` tag can be used to play audio
+      - The `controls` attribute renders audio player controls
+      - The `<source>` tag is nested inside `<audio>` with the attribute `src` and `type`
+        - The `src` attribute should have a value corresponding to the audio path
+        - The `type` attribute shoudl have a value corresponding to the file type `"audio/mpeg"`, `"audio/wav"` or `"audio/ogg"`
+    - The `<img>` tag can be used to render an image
+      - The `width` and `height` attributes control how the image is rendered
+        - If only the width or height is provided a value, the browser will automatically fill the other value using the image aspect ratio
+      - The `src` attribute should have a value corresponding to the image path
+      - The `alt` attribute should have a value representing a description of the image, which is used when the image can't load or for accessibility screen readers
+      - A parent `<figure>` tag can wrap `<img>` for greater accessibility, and a descriptive value in `<figcaption>` should be provided alongside `<img>`
+    - The `<iframe>` tag embeds a HTML file in a HTML file, but its use is not recommended due to security risks
+      - The `width` and `height` attributes control how the image is rendered
+      - The `src` attribute should have a value corresponding to the HTML path
+      - The `allow` attribute restricts the embedded HTML from accessing certain features, such as `allow="camera 'none'; microphone 'none'"`
+      - The `sandbox` attribute declared with no value places restrictions on the embedded HTML, and specifying a value will lift the declared restrictions such as allowing file downloads or popup windows
+    - The `<canvas>` tag supports 2D animations and games
+      - The `document.getElementById(canvasId).getContext("2d")` JavaScript object can be manipulated in order to animate the canvas element in the DOM
 - CSS is a stylesheet language that compliments HTML by improving its look and layout
   - Can exist separatedly from an HTML document
   - Media queries
