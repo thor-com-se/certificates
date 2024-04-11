@@ -24,6 +24,53 @@
       - Meta tags use the `property` attribute instead of `name` and each type starts with "og:" such as `property="og:image"` for the image preview of the website link
         - The `property="og:type"` attribute is important because it identifies the category of the link
       - Before this standard, and when it's not used, web crawlers will pick the most likely information and media to use in the link preview
+  - User input
+    - Forms are created using the `<form>` tag
+      - The `action` attribute of `<form>` sets a value referencing the URL path for the web server
+        - When the value is not provided, it defaults to the current web address
+        - The value is appended to the current web address when it is an absolute path such as `/login` or relative path such as `login`, instead of a full URL starting with `http://` or `https://`
+      - Forms submit data as a HTTP request from the client to a server, utilizing the method defined as the value of the form's `method` attribute, either `method="get"` or `method="post"`
+        - The HTTP `"get"` method (default) embeds data in a URL which has three issues: URL length limit in browsers causing data loss, URL length limit on web server causing data loss, security threats as a result of insecure unecrypted data in the URL
+        - The HTTP `"post"` method embeds data unencrypted in the body of the content of the request
+        - HTTPS encrypts data while allowing both the client and web server to decrypt data
+    - Inputs are added to forms using the `<input>` tag
+      - Inputs can be placed inside `<div>` tags such that they are rendered on new lines
+      - Inputs should have an `id` and `name`
+        - Ids and names would typically have the structure of "object_purpose" where object is the overall form and purpose is the purpose of the data in each individual input such as "user_email" for an input email in a user login form
+        - Ids are unique but names can be reused for multiple input tags of the same purpose
+        - `<label>` is adding to an input by providing a value to its `for` attribute with a value corresponding to the input, such as `<label for="password">` for `<input type="password" id="password" name="password">`
+        - Labels help assistive technology such as screenreaders understand the meaning of form inputs
+      - Labels should be added for input types such as `text`
+      - The `reset` type for `<input>` resets all inputs in a form to their initial value, but this would not reset validation errors if the initial state is not a valid submission
+      - Radio buttons provide a list of options from which one option can be chosen
+        - A group of radio buttons are added to a `<fieldset>` elements with an `id` attribute value describing the purpose of the buttons such as `<fieldset id="size">` for size options
+        - Radio buttons are `<input>` elements with `type="radio"`
+          - The `value` attribute is used to set the predefined value
+          - The `checked` attribute sets a radio button as the default choice
+          - The `name` attribute should have a value matching the id of its parent `<fieldset>`
+        - Radio buttons can be nested inside a `<label>` in addition to `<fieldset>` to improve mobile user experience
+      - Interactive form elements help the user input data
+        - The `date` type for `<input` renders a structured input field for correctly entering dates
+        - The `range` type for `<input>` renders a slider between to values set with the `min` and `max` attributes, where default value is set with the `value` attribute
+          - The `<output>` tag can be used to render the result of an input tag
+          - The `oninput` attribute of `<input>` can be used to execute a function upon change to the input value
+            - The `oninput="this.nextElementSibling.value = this.value"` value would update the next element, such as `<output>` with the value of the input tag
+        - The `<datalist>` tag can be used like radio buttons to provide a dropdown of predefined options, but it acts a textfield where the user can type to search options
+          - The `<option>` tag provides an option in the dropdown list and has a `value` attribute
+    - Form validation is a process that ensures input data is valid
+      - Client-side validation checks for errors as they are typed, either done by browser of JavaScript code, before the data is submitted to the server
+        - `<input` element type-tag values such as `type="email"` provide validation
+        - The `required` attribute on `<input>` ensures data is provided by the user before the form can be submitted
+        - The `minlength` and `maxlength` attributes on `<input>` ensure the length of input data is within the given constraints before it can be submitted to the server
+        - The `hidden` type for `<input>` provides data upon submitting a form but is not visible to the user
+        - The `multiple` attribute can be used for `email` and `file` type to permit multiple entries in the same input
+        - The `pattern` attribute is used with a regular expression value to validate text, date, search, URL, tel, email and password input types
+      - Server-side validation handles data submitted by the client to the server, to prevent tempering or invalid data, through complex checking against databases and business requirements
+      - CSS pseduo-class selectors can be applied to `input` to style form inputs when input is invalid
+        - `input:invalid` applies a style when data is invalid, but this will apply instantly when a `required` input is rendered
+        - `input:focus:invalid` applies a style when data is invalid and an input is selected
+    - As browsers and operating systems do not have a standard for rendering forms, CSS can be utilized to prevent inconsistencies
+  - Media elements
 - CSS is a stylesheet language that compliments HTML by improving its look and layout
   - Can exist separatedly from an HTML document
   - Media queries
