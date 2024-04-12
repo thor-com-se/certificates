@@ -96,7 +96,24 @@
     - The `<canvas>` tag supports 2D animations and games
       - The `document.getElementById(canvasId).getContext("2d")` JavaScript object can be manipulated in order to animate the canvas element in the DOM
 - CSS is a stylesheet language that compliments HTML by improving its look and layout
-  - Can exist separatedly from an HTML document
+  - CSS can exist as a file separate from an HTML document
+  - The "viewport" is what is rendered on the webpage
+  - The `display` property controls if boxes are rendered inline or as a block
+    - Flexboxes (`display: flex`) are one-dimensional layouts that can grow/shrink/align items, best for small-scale layouts
+      - The `flex-direction` property can be set to either `row` or `column`, with row direction as default
+      - The two axis are "main" (horizontal) and "cross" (vertical) in row direction
+      - Alignment is set with the properties: `justify-content`, `align-items`, `align-self` and `align-content`
+      - Items do not wrap to the next line by default but this can be set with the property-value `flex-wrap: wrap`
+      - The `gap` property controls the spacing between items
+      - The behavior of items is set with the properties: `flex-grow`, `flex-shrink` and `flex-basis`
+        - The "shorthand notation" for these properties is `flex: 0 1 auto` for `flex-grow: 0; flex-shrink: 1; flex-basis: auto`
+      - Flexboxes can be used to construct "flex charts" such as a bar chart
+    - Grids (`display: grid`) are two-dimensional layouts, best for large-scale layouts
+    - There are various units of measurements for absolute or relative sizing
+      - The absolute units are `Q`, `mm`, `cm`, `in`, `pc`, `pt` and `px`
+      - The relatve units are `em`, `ex`, `ch`, `rem`, `lh`, `rlh`, `vw`, `vh`, `vmin`, `vmax`, `%`
+        - Relative units are relative to their parent element or the viewport size
+  - Fonts, Color, Layout, Size
   - Media queries
   - Box-sizing
   - Multiple backgrounds
