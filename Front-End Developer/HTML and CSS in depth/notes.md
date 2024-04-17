@@ -109,6 +109,16 @@
         - The "shorthand notation" for these properties is `flex: 0 1 auto` for `flex-grow: 0; flex-shrink: 1; flex-basis: auto`
       - Flexboxes can be used to construct "flex charts" such as a bar chart
     - Grids (`display: grid`) are two-dimensional layouts, best for large-scale layouts
+      - `grid-template-columns` property sets the size of the columns in the grid
+        - A value such as `repeat(3, 100px)` should be used for responsive columns
+      - `grid-template-rows` property sets the size of the rows in the grid
+        - The fraction unit (`fr`) can be used to set a relative size such as `grid-template-rows: 2fr 1fr`
+      - `grid-auto-rows` property sizes all rows to the same size
+        - The value `minmax(150px, auto)` can be set to dynamically render either the minimum or maximum (in this case `auto`) size
+      - `grid-gap`, `column-gap` and `row-gap` set the gap between columns/rows, columns and rows in a grid
+      - Grid frameworks provide a grid system with units, where the maximum width is typically 12 or 16
+        - `grid-column: 1/ span 12` would set the column width to span all 12 units in the grid system
+    - `grid-template-areas` property sets the rows in the grid, and its value is a list of space-separated quotes where each quote contains the string names of elements present in the row and each element is a column
     - There are various units of measurements for absolute or relative sizing
       - The absolute units are `Q`, `mm`, `cm`, `in`, `pc`, `pt` and `px`
       - The relatve units are `em`, `ex`, `ch`, `rem`, `lh`, `rlh`, `vw`, `vh`, `vmin`, `vmax`, `%`
