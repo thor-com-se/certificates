@@ -66,7 +66,7 @@
         - The `multiple` attribute can be used for `email` and `file` type to permit multiple entries in the same input
         - The `pattern` attribute is used with a regular expression value to validate text, date, search, URL, tel, email and password input types
       - Server-side validation handles data submitted by the client to the server, to prevent tempering or invalid data, through complex checking against databases and business requirements
-      - CSS pseduo-class selectors can be applied to `input` to style form inputs when input is invalid
+      - CSS pseudo-class selectors can be applied to `input` to style form inputs when input is invalid
         - `input:invalid` applies a style when data is invalid, but this will apply instantly when a `required` input is rendered
         - `input:focus:invalid` applies a style when data is invalid and an input is selected
     - As browsers and operating systems do not have a standard for rendering forms, CSS can be utilized to prevent inconsistencies
@@ -123,13 +123,62 @@
       - The absolute units are `Q`, `mm`, `cm`, `in`, `pc`, `pt` and `px`
       - The relatve units are `em`, `ex`, `ch`, `rem`, `lh`, `rlh`, `vw`, `vh`, `vmin`, `vmax`, `%`
         - Relative units are relative to their parent element or the viewport size
+  - CSS rules are applied based on a "specificity hierarchy"
+    - Highest specificity: Inline styles are applied over all other styling
+    - IDs styling is second in prioritization
+    - Classes, attributes, and pseudo-classes styling is third in prioritization
+    - Lowest specificity: Elements and pseudo-elements styling is applied last
+  - CSS selectors selectively apply rulles to HTML elements
+    - Element selectors apply based on the element tag (`body { }`)
+    - ID selectors apply based on the ID attribute of an element (`#title { }`)
+    - Class selectors apply based on the class attribute of an element (`.title { }`)
+    - Attribute selectors apply based on the matching attribute or value of an element
+      - Applying to elements with attribute: `t[a] { }` where `t` is the element tag and `a` is the attribute
+      - Applying to elements with attribute value: `t[a*="s"] { }` where `t` is the element tag, `a` is the attribute, and `s` is a string matching part of the attribute value
+      - Applying to elements with exact attribute value: `t[a="s"] { }` where `t` is the element tag, `a` is the attribute, and `s` is a string matching an exact attribute value
+    - Nth-of-type selectors apply to the n-th child matching the given type inside the parent element (`p:nth-of-type(n) { }`)
+    - Nth-child selectors apply to the n-th child of the parent element (`.menu:nth-child(n) { }`)
+    - Star selectors apply to all children of the given element, which is the entire document by default (`* { }`)
+    - Group selectors (selector stacking) apply to multiple comma-delimited selectors at once (`h1, p { }`)
+    - Combination selectors apply to elements based on their relationship to each other
+      - Descendant selectors apply to descendant elements of a parent element (`div h1 { }`)
+      - Child selectors apply to direct descendant elements of the parent element (`div > h1 { }`)
+      - General sibling selectors apply to all sibling elements of an element (`h1 ~ p { }`)
+      - Adjacent sibling selectors apply to the first sibling element of an element (`h1 + p { }`)
+    - Pseudo-classes are state-based selectors that apply based on the state of the element, such as hover-state (`div:hover { }`)
+      - As pseudo-classes can overwrite each other, it is important to follow the "LVHA" order (link, visited, hover, active)
+      - User action pseudo-classes apply based on user interaction with an element, such as `:hover` and `:active`
+      - Form state pseudo-classes apply based on the state of an element in a form, such as `:disabled` / `:enabled`, `:checked` / `:indeterminate`, and `:valid` / `:invalid`
+      - Position state pseudo-classes apply based on the position of an element relative to its parent, such as `:first-of-type`, `:last-of-type`, `:nth-of-type()` and `:nth-last-of-type()`
+    - Pseudo-element selectors apply to part of an element (`p::first-letter { }`)
+      - Text in elements can be styled using the pseudo-elements: `::first-letter`, ``::first-line``, ``::selection`` and ``::marker``
+      - The pseudo-elements ``::before`` and ``::after`` can be used together with the `content` property to insert styled text before or after an element
+  - CSS effects animate and transition elements from one state to another
+    - Effects act as a content highlight, to they catch and maintain user attention
+    - Effects can become distracting or cause slow performance if used erroneously
+    - JavaScript libraries such as JQuery and Popmotion provide effects, but CSS effects are still popular because they are simpler, quicker, less expensive, and easier to learn
+    - Common effects: hover effect, lightening/darkening, cursor effect, sliding galleries and slideshows, video backgrounds, parallax, scroll to top, element and color transitions, full screen snapping
+    - Text effects added visual styles to text
+      - Text can be styled with `text-overflow` and `word-wrap` when it overflows its container, with values such as `ellipses` (...) to hide text until you hover over it, `clip` which clips the text, and `break-word`
+      - `text-shadow` property adds a shadow effect to text
+    - The `transform` property modifies the spatial position of an element, such as scale or angle
+    - The `transition` property sets the transition from one state to another state of an element, such as `transition: 2s` for a 2-second gradual transformation
+    - The `animation` shorthand property is used to create complex animations, which are then executed by a keyframe rule
+      - The syntax is `animation: ${keyframe name} ${speed} ${time duration} ${timing function}`
+      - The individual `animation-` properties can be added in addition to this shorthand, for purposes such as timing, delay, direction, iteration count etc.
+    - The `@keyframe rule` is an "at-rule" (describes behavior or performs action) that defines a name for an animation and controls its timing, using a keyframes-selector and css styles
+      - The optional percentage keywords can be used for percentage-wise progress
+        - The syntax is `@keyframes ${keyframe name} { 0% { } 100% { } }` and multiple percentages can be declared with any value
+      - The optional keywords `from { }` and `to { }` can be used to transition an animation between two states
+        - The syntax is `@keyframes ${keyframe name} { from { } to { } }`
+  - CSS preprocessors such as SASS, SCSS, and Stylus, transpile from their own language down into CSS
+    - Variables (`$name: value`) are an added feature in these preprocessors, which make it possible to declare a value once and reference throughout CSS code
+    - Directives are an added feature that make it possible for one CSS rule declaration to be inherited by another CSS rule declaration, using the keywords `@mixin` before declaration and `@include ...` for reference
   - Fonts, Color, Layout, Size
   - Media queries
   - Box-sizing
   - Multiple backgrounds
   - Border images
-  - Text shadows
-  - Transformations and transitions
 - W3C manages the specifications for web standards like HTML and CSS
   - They added media tags, responsive design, form input tags, validation features, text editing and spellchecking
 - Layouts commonly used for websites include top navigation bar layout, carousel layout, blog layout, dashboard layout
