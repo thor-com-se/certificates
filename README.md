@@ -2,7 +2,7 @@
 # Professional certificates
 
 - [Front-End Developer (Meta)](#front-end-developer-meta)
-- [Data Structures and Algorithms (University of California, San Diego)](#data-structures-and-algorithms-university-of-california-san-diego)
+- [Back-End Developer (Meta)](#back-end-developer-meta)
 
 ## Front-End Developer (Meta)
 
@@ -31,12 +31,12 @@
 | [Front-End Developer Capstone](https://www.coursera.org/learn/meta-front-end-developer-capstone)              |                                                                                                                                               |                                                                                                                                    |                                                                                     |                                                                                                                                                                                                                                                                                |
 | [Coding Interview Preparation](https://www.coursera.org/learn/coding-interview-preparation)                   |                                                                                                                                               |                                                                                                                                    |                                                                                     |                                                                                                                                                                                                                                                                                |
 
-## Data Structures and Algorithms (University of California, San Diego)
+## Back-End Developer (Meta)
 
 <!-- omit in toc -->
 ### Description
 
-[https://www.coursera.org/specializations/data-structures-algorithms](https://www.coursera.org/specializations/data-structures-algorithms)
+[https://www.coursera.org/professional-certificates/meta-back-end-developer](https://www.coursera.org/professional-certificates/meta-back-end-developer)
 
 <!-- omit in toc -->
 ### Certificate
@@ -46,11 +46,14 @@
 <!-- omit in toc -->
 ### Modules
 
-| Name                                                                                                    | Notes | Folder | Certificate (link) | Certificate (image) |
-| :------------------------------------------------------------------------------------------------------ | ----- | ------ | ------------------ | ------------------- |
-| [Algorithmic Toolbox](https://www.coursera.org/learn/algorithmic-toolbox)                               |       |        |                    |                     |
-| [Data Structures](https://www.coursera.org/learn/data-structures)                                       |       |        |                    |                     |
-| [Algorithms on Graphs](https://www.coursera.org/learn/algorithms-on-graphs)                             |       |        |                    |                     |
-| [Algorithms on Strings](https://www.coursera.org/learn/algorithms-on-strings)                           |       |        |                    |                     |
-| [Advanced Algorithms and Complexity](https://www.coursera.org/learn/advanced-algorithms-and-complexity) |       |        |                    |                     |
-| [Genome Assembly Programming Challenge](https://www.coursera.org/learn/assembling-genomes)              |       |        |                    |                     |
+| Name                                                                                                                         | Notes | Folder | Certificate (link)                                                                  | Certificate (PDF)                                                                                                                                                                                                                                                         |
+| :--------------------------------------------------------------------------------------------------------------------------- | ----- | ------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Introduction to Back-End Development](https://www.coursera.org/learn/introduction-to-back-end-development)                  |       |        | [certificate](https://www.coursera.org/account/accomplishments/verify/6H3RNVJUP5Q8) | <a href="Back-End%20Developer/Introduction%20to%20Back-End%20Development/certificate.pdf"><img alt="Image of certificate for Introduction to Back-End Development" src="Back-End%20Developer/Introduction%20to%20Back-End%20Development/certificate.png" width="100"></a> |
+| [Programming in Python](https://www.coursera.org/learn/programming-in-python)                                                |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [Version Control](https://www.coursera.org/learn/introduction-to-version-control)                                            |       |        | [certificate](https://www.coursera.org/account/accomplishments/verify/UXYPSMTYUTAP) | <a href="Back-End%20Developer/Version%20Control/certificate.pdf"><img alt="Image of certificate for Version Control" src="Back-End%20Developer/Version%20Control/certificate.png" width="100"></a>                                                                        |
+| [Introduction to Databases for Back-End Development](https://www.coursera.org/learn/intro-to-databases-back-end-development) |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [Django Web Framework](https://www.coursera.org/learn/django-web-framework)                                                  |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [APIs](https://www.coursera.org/learn/apis)                                                                                  |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [The Full Stack](https://www.coursera.org/learn/the-full-stack)                                                              |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [Back-End Developer Capstone](https://www.coursera.org/learn/back-end-developer-capstone)                                    |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
+| [Coding Interview Preparation](https://www.coursera.org/learn/coding-interview-preparation)                                  |       |        |                                                                                     |                                                                                                                                                                                                                                                                           |
