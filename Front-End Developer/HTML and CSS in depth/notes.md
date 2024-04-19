@@ -174,11 +174,36 @@
   - CSS preprocessors such as SASS, SCSS, and Stylus, transpile from their own language down into CSS
     - Variables (`$name: value`) are an added feature in these preprocessors, which make it possible to declare a value once and reference throughout CSS code
     - Directives are an added feature that make it possible for one CSS rule declaration to be inherited by another CSS rule declaration, using the keywords `@mixin` before declaration and `@include ...` for reference
-  - Fonts, Color, Layout, Size
-  - Media queries
-  - Box-sizing
-  - Multiple backgrounds
-  - Border images
 - W3C manages the specifications for web standards like HTML and CSS
   - They added media tags, responsive design, form input tags, validation features, text editing and spellchecking
 - Layouts commonly used for websites include top navigation bar layout, carousel layout, blog layout, dashboard layout
+- Errors and debugging in programming
+  - Developer errors can be broadly classified as "skill-based", "rule-based", and "knowledge-based"
+    - Skill-based errors can be syntax errors and typos, such as missed delimiters, missing quotation marks, or unclosed brackets
+      - Not following best practices such as uppercase/lowercase for a programming language may not be flagged as an error but is important
+    - Rule-based errors are a result of developers not following rules, such as no numeric values at the beginning of CSS classes
+    - Knowledge-based errors are a result of gaps in developer knowledge
+  - Common CSS errors can be avoided through best practices
+    - Using CSS shorthands instead of multiple properties to avoid a missing property
+    - Applying and understanding specificity to avoid misconfigurations
+      - Overspecificity can happen when using a CSS selector that is too complex (`div #blog div p .center { }`), which can waste the browser's time and make it difficult to troubleshoot code
+    - Avoid redundancy of CSS rules, selectors, and properties
+    - Perform a "CSS reset" by using a universal selector (`* { margin: 0px }`) before applying CSS rules, as different browsers render different defaults
+  - CSS applies all valid rules and ignores erroneous rules, so errors can be handled by checking for correct syntax
+    - Linters can check code syntax and highlight errors
+    - The stylelint extension applies best practice rules and highlights noncompliant code as a syntax error
+  - Code can be debugged by isolating it such that it can exist and be tested independent of its context
+  - Some browsers provide a Cumulative Layout Shift (CLS) to determine web page efficiency
+  - Other debugging approaches are editing the HTML directly in the browser, adding breakpoints, rendering with responsive design and device modes
+  - Diagnostics are browser debugging tools that provide feedback, such as error logs, JavaScript code debugging, inspecting HTTP requests/responses, JavaScript performance, CSS grids and flexbox layouts, HTML and CSS rendering, and live editing of code
+    - While inspecting an HTML document you can visually select elements to find the source code and see CSS styles applied
+    - Live editing of code is a time effective way to see the result of code before implementing it
+  - Compatibility issues of CSS rules occur because browsers render the same rule differently, such as Safari's Webkit vs Chrome
+    - There are websites with tables comparing browser compatibility for each CSS rule
+    - There are websites that run virtual browser environments to see the result on different platforms
+    - Mobile devices can be used for testing mobile compatibility
+    - Media queries (`@media ... { }`) apply CSS rules selectively depending on the browser and device type
+    - A "CSS reset" file can be used that sets default styling before applying custom styling, for greater compatiblity
+- UI testing ensure a reliable product and approaches include: automated user acceptance testing, cross-device testing, and visual regression testing
+  - Cross-device testing involves manual or automated testing across different types of devices, such as desktop and mobile
+    - Browser inspectors provide tools for changing the viewport size and simulating different network conditions, but real-world environment testing is done with physical devices
