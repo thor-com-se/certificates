@@ -1,11 +1,10 @@
+/* General styling */
+
 body {
     font-family: "Lora", sans-serif;
     background-color: #206241;
-    color: rgb(226, 225, 225);
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 5%;
-    margin-right: 5%;
+    color: rgb(225, 225, 225);
+    margin: 3rem 5%;
 }
 
 h1 {
@@ -15,6 +14,56 @@ h1 {
 h2 {
     font-size: 2rem;
 }
+
+/* Animated transitions */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.75s ease forwards 0.25s;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.move-up {
+    animation: moveUpAnimation 0.75s ease forwards 0.25s;
+}
+
+@keyframes moveUpAnimation {
+    from { transform: translateY(2rem); }
+    to { transform: translateY(0); }
+}
+
+.move-down {
+    animation: moveDownAnimation 0.75s ease forwards 0.25s;
+}
+
+@keyframes moveDownAnimation {
+    from { transform: translateY(-2rem); }
+    to { transform: translateY(0); }
+}
+
+.scale-up {
+    transform: scale(0.9);
+    animation: scaleUpAnimation 0.75s ease forwards 0.25s;
+}
+
+@keyframes scaleUpAnimation {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+.highlight {
+    transition: 0.5s;
+}
+
+.highlight:hover {
+    transform: scale(1.015);
+}
+
+/* Header */
 
 header {
     display: flex;
@@ -33,6 +82,8 @@ header > img {
     height: auto;
 }
 
+/* Navigation */
+
 nav ul {
     display: flex;
     list-style: none;
@@ -45,17 +96,12 @@ nav li {
     transition: transform 0.3s ease;
 }
 
-nav li:hover {
-    transform: scale(1.1);
-}
-nav li:active {
-    transform: scale(0.9);
-}
-
 nav a {
     text-decoration: none;
     color: rgb(226, 225, 225);
 }
+
+/* Main content */
 
 main {
     padding-top: 1rem;
@@ -70,24 +116,18 @@ section {
 article {
     flex: 1;
     background-color: #1c583a;
-    padding: 0.5rem;
+    border: 0.5rem solid #1c583a;
 }
 
-article h1 {
-    padding-top: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-article h2 {
-    padding-top: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.text-container {
+    padding: 1.5rem;
 }
 
 article p {
-    padding: 1.5rem;
+    padding-top: 1.5rem;
 }
+
+/* Image container */
 
 .image-container {
     position: relative;
@@ -104,6 +144,8 @@ article p {
     height: 100%;
     object-fit: cover;
 }
+
+/* Footer */
 
 footer {
     display: flex;
