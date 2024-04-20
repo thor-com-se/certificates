@@ -1,0 +1,123 @@
+body {
+    font-family: "Lora", sans-serif;
+    background-color: #206241;
+    color: rgb(226, 225, 225);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header h2 {
+    flex: 1;
+}
+
+header > img {
+    display: block;
+    width: 2rem;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+}
+
+nav li {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+nav li:hover {
+    transform: scale(1.1);
+}
+nav li:active {
+    transform: scale(0.9);
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(226, 225, 225);
+}
+
+main {
+    padding-top: 1rem;
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+article {
+    flex: 1;
+    background-color: #1c583a;
+    padding: 0.5rem;
+}
+
+article h1 {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+article h2 {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+article p {
+    padding: 1.5rem;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+footer div img {
+    display: block;
+    width: 2rem;
+    height: auto;
+}
+
+footer p {
+    flex: 1;
+}
