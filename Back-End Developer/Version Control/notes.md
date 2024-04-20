@@ -1,0 +1,77 @@
+- Version control is a system that records and tracks file changes
+  - Provides access to history
+  - Provides ability to revert changes and roll back to previous version
+  - Files can be added, modified, and removed
+  - Files have a revision history, identity
+  - Benefits include revision history, identity, collaboration, automation and efficiency
+    - Revision history provides a date for changes and way to roll back to an older version or revert specific changes (who, when, and what)
+    - Identity shows who is responsible for making or approving a change
+    - Collaboration is improved by tracking which changes have been made relative to the plan for which changes need to be made
+      - Code is peer reviewed when it is ready to be implemented
+    - Efficiency is achieved through an agile approach to development, wherein iterations of changes are planned for sprints of i.e. 2 weeks and then reviewed and the plan continously reassessed
+  - DevOps (Developer Operations) is a set of practices, philopsohies and tools that increase the ability to deliver applications in high quality and velocity
+- Types of version control systmems
+  - Centralized systems (VCS) use a client-server model where the server has the source version of a project and the client versions are clones that require all changes to contact the server
+  - Distributed systems (DVCS) use a client-server model where both the server and client have the source version of a project and changes can be made to the client and then pushed to the server later
+- Workflows for version control
+  - Continuous Integration (CI) is the process of automating integration of code changes by automatically compiling the project source code and running tests to guard against merge conflicts 
+  - Continuous Delivery is an extension of CI whereby compiled project source code is also automatically packaged and delivered
+  - Continuous Deployment is an extension of Continuous Delivery whereby packaged code is deployed and tested in a safe environment before being delivered to the release environment
+- Development environments are commonly: developer, test, quality assurance, staging, production
+  - The staging environment should match production but be separate and can be created using snapshots of the production environment
+    - Useful for new feature rollout, testing, migrations, configuration
+  - The production environment is live meaning it is used by users
+    - If rollouts to production have not been througougly tested they can cause downtime which affects revenue, create security vulnerabilities, and damage the reputation of the company
+- The command line provides text-based human-computer interaction
+  - Unix commands
+    - `cd [folder name]` changes directory
+      - Folder names can be provided as a relative path from the current directory or an absolute path from the disk
+    - `cd ..` changes directory to parent of current folder
+    - `ls` ouputs the contents of the current directory
+    - `touch [file name].[file extension]` creates a new empty file
+    - `mv [file name] [folder name]` moves a file in the current directory to another directory
+    - `mkdir [folder name]` creates a new empty folder
+    - `history` ouputs the history of recently used commands
+    - `man [command]` ouputs the manual for the given command
+    - Flags modify commands to provide input or output a value such as `[command] --help` for instructions
+    - Pipe (`[command] | [command]`) makes it possible to pass the output of a command as input to another command
+      - Example "Combined word count in two text files": `cat [file name] [file name] | wc -w`
+    - Redirection of output redirects it directly to a target
+      - Standard input (`[output target] < [input source]`)
+      - Standard output (`[input source] > [output target]`)
+      - Standard error (`[input source] 2> [output target]`)
+      - Standard output and error (`[input source] > [output target] 2>&1`)
+    - Grep (global regular expression print) searches a text file for regular expression matches (`grep [expression] [file name]`)
+      - `grep -i [expression] [filename]` ignores case sensitivity
+      - `grep -w [expression] [filename]` outputs an exact match
+      - This can be combined with `ls` to filter directory files with `ls [directory name] | grep [expression]`
+- Git is a distributed version control system
+  - Git workflow
+    - Modified is when a file has been changed
+    - Staged is when a modified file has been added to .git with `git add`
+    - Committed is when a modified file has been locally committed to the branch of a repository with `git commit`
+  - Branches make it possible to work on the same repository and commit staged changes without directly affecting the repository until the branched changes are merged in
+  - Forking is another workflow than branching, wherein the entire repository is cloned rather than a branch being cloned into a parallel branch, and pull requests will have to merge into the original repository instead of a branch
+  - Pull requests compare branch changes to changes made to the repository since the branch was created, to guard against merge conflicts. Requests are peer reviewed by other authors on the repository with approval permissions
+  - `git init` initializes a .git file in the current directory
+  - `git remote add origin [remote .git file URL]` adds a remote origin to the local .git
+  - `git checkout -B [branch name]/[subbranch name]` switches from the main branch of a repository to a new branch which is commonly a "feature" branch such as "feature/[feature name]"
+  - `git commit -m "[commit message]"` commits any staged files
+  - `git push -u origin [branch path]` pushes the changes made to files (but not all the files) on the branch to the remote origin. If there are no merge conflicts these changes can be auto-merged on the remote server
+  - `git pull` retrieves changes on the remote server to the local .git and updates the cloned files
+  - `git branch` outputs the name of the current branch
+  - `git status` outputs the status of the git workflow
+  - `git blame` ouputs the identity of who made a change
+    - `git blame [file name]` outputs all changes made to a specific file with the commit ID, date, and author name
+    - `git blame -L [first line number],[last line number] [file name]` outputs changes made between specific line numbers
+  - `git clone [HTTPS URL of .git file]` clones a respository from the server to the client
+  - Rebasing attempts to merge two commits and raises a merge conflict when this requires attention from the authors
+  - `git log --merge` outputs merge conflicts
+    - `git log --pretty=oneline` outputs all commits prettified
+    - `git log -p [ID from git blame change]` outputs the changelog for a specific change
+  - `git diff` can output the difference between two commits causing a merge conflict, similar to `status` but with specific changes
+    - `git diff HEAD [file name]` outputs the changes for a specific file
+    - `git diff [branch name] [branch name]/[subbranch name]` compares changes between two branches such as "main" and "feature/..."
+  - "HEAD" is a part of the .git file that references the branch and modified files on that branch
+    - This ID changes when another branch is checked out
+- GitHub is a cloud-based hosting service that provides a GUI for collaborating through git
