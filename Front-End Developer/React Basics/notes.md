@@ -1,0 +1,48 @@
+- JavaScript modules are files with a default or named export
+  - Default exports use the `export default` syntax, such as `export default functionName`
+    - This module would be imported in another file using syntax `import functionName from "./fileName";`
+  - Named exports use the `export { }` syntax for multiple exports, such as `export { functionName, otherFunctionName }`
+    - This module would be imported in another file using syntax `import { functionName } from "./fileName";`
+- React.js is a library for building user interfaces
+  - Components are small are and isolated pieces of code used to compose complex UIs
+    - A component should be reusable and independent
+    - "Component-based architecture" means composing a user interface (UI) using components that do not necessarily inherit from each other, unlike an object-oriented approach
+  - React is only a client-side library and not a full-fledged standalone solution
+  - Useful for Single Page Applications (SPAs) where the content dynamically changes in response to user interaction rather than being on separate pages that would need to be reloaded
+    - Features include: rich user interfaces, speed, scalability, flexibility
+  - The Virtual Document Object Model (DOM) in React only re-renders the HTML DOM when necessary, which minimizes re-renders to improve performance
+  - React provides two kinds of components: functional components and class components
+    - Functional components act as JavaScript functions, as they are reusable, take an input, perform a procedure or calculation, and return an output
+      - Not executed until referenced
+    - Class components as as JavaScript classes
+  - The "root component" inside `index.js` is the minimum one component rendered on a React DOM
+    - This is placed in the HTML DOM with an element ID of value "root"
+  - The JSX (JavaScript XML) syntax extends JavaScript with HTML-like syntax, which combines HTML with JavaScript
+    - Uses opening (`<div>`) and closing brackets (`</div>`) syntax
+    - The "className" property is used to add HTML classes to a JSX element
+    - JSX element (component) names should be capitalized so that React can differentiate them from HTML elements
+    - Variables are inserted into JSX elements using syntax: `<ElementName>{variableName}</ElementName>`
+    - JSX code is "transpiled" to JavaScript code in order to run in browsers
+      - Babel is an example of a "JavaScript compiler" that accomplishes such transpilation of code
+- React projects are initialized by the Node Package Manager (NPM) with command `npm init react-app [app name]`
+  - The "node_modules" folder contains installed node modules
+  - The "public" folder and contains assets that will be displayed in the app
+    - The "index.html" file contains the element in its body, where React code will be inject upon state changes
+    - The "manifest.json" file is used to provide metadata to the client device
+    - The "favicon.ico" file is displayed as the website logo
+    - The "robots.txt" file is used for Search Engine Optimization (SEO)
+  - The "src" folder contains source code
+    - The "index.js" file and "App.js" file are used to render the root component of the app
+    - The "App.css" file contains styles for the "App.js" component
+    - The "index.css" file contains styles used throughout the entire app
+    - The "App.test.js" file is used for performance testing
+    - It is adviced to either group files in this folder by features or file type, and as such components can be stored in a "components" folder
+  - The ".gitignore" file is a hidden file that describes which folders and files to exclude in git commits
+  - The "package.json" file lists information about the app to instruct NPM on scripts and tasks
+  - The "package-lock.json" file lists all dependencies and versions, and helps NPM to rebuild the project and install node modules
+- "Modular Programming" is the practice of bundling components into modules, where each component represents a functionality (such as a button)
+  - React components can be imported using the syntax `import ComponentName from './ComponentFile'`
+- State management
+- Navigation and assets
+- Modern UIs
+- Components
