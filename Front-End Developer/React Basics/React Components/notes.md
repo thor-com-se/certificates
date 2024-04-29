@@ -18,10 +18,11 @@
   - The "root component" inside `index.js` is the minimum one component rendered on a React DOM
     - This is placed in the HTML DOM with an element ID of value "root"
   - The JSX (JavaScript XML) syntax extends JavaScript with HTML-like syntax, which combines HTML with JavaScript
-    - Uses opening (`<div>`) and closing brackets (`</div>`) syntax
-    - The "className" property is used to add HTML classes to a JSX element
+    - Uses opening bracket (`<div>`) and closing bracket (`</div>`) syntax
+    - The "className" property (`<div className={value} />`) is used to add HTML classes to a JSX element, because `class` is a reserved JavaScript keyword
     - JSX element (component) names should be capitalized so that React can differentiate them from HTML elements
     - Variables are inserted into JSX elements using syntax: `<ElementName>{variableName}</ElementName>`
+    - React fragments (`<>` and `</>`) can be used as the parent element in a return statement (`return (<><h1>Hello</h1><h1>World</h1></>)`)
     - JSX code is "transpiled" to JavaScript code in order to run in browsers
       - Babel is an example of a "JavaScript compiler" that accomplishes such transpilation of code
 - React projects are initialized by the Node Package Manager (NPM) with command `npm init react-app [app name]`
@@ -42,7 +43,17 @@
   - The "package-lock.json" file lists all dependencies and versions, and helps NPM to rebuild the project and install node modules
 - "Modular Programming" is the practice of bundling components into modules, where each component represents a functionality (such as a button)
   - React components can be imported using the syntax `import ComponentName from './ComponentFile'`
-- State management
-- Navigation and assets
-- Modern UIs
-- Components
+- Parameters to functional components are passed as a React "props" object (`function ComponentName(props) { }`) using JSX syntax
+  - JavaScript objects group related data of different types
+  - Props is used like a function argument but values are passed as HTML attributes (`<ComponentName propertyName={propertyValue} />`)
+  - Props can only be passed from parent component to child component, not the other way
+  - The `children` property is an attribute automatically passed to `props` and contains the child elements of the component
+    - This enables components to be generic, meaning they serve the same purpose irrespective of what type of child elements are nested within its tags
+  - Transpiled functional components have syntax `React.createElement(type, [props], [...children])` where `children` can be a nested `React.createElement()`
+- JSX elements can be styled with a .css file, inline styling (object literal), or a style object variable
+  - Styling with a .css file involves either referencing the .css file in `index.html` or importing it into the JavaScript file, and referencing CSS classes using `className=""`
+  - Inline styling involves passing an object literal using JSX syntax to the "style" attribute (`style={{color: "red"}}`) on a JSX element
+    - Hyphenated CSS properties use camelCase in JSX (`background-color` becomes `backgroundColor`)
+  - A style object variable is essentially moving inline JSX styling to a variable (`const styles = {color: "red"}`) and assigning it as the value to the "style" attribute (`style={styles}`)
+- "Pure functions" are functions that return a consistent and predictable output for the same argument values
+  - Functional components should never modify their own props within the function
