@@ -1,0 +1,9 @@
+- Event listeners "trigger" JavaScript code in HTML
+  - HTML attributes handle events such as `onclick`
+    - This involves manipulating the DOM, which is not ideal when working with React
+    - JavaScript can assign a handler for an event and action (function) using the `.addEventListener` method of an element
+  - JSX attributes handle events in React such as `onClick`
+    - Events are grouped into groups such as Mouse Events and Clipboard Events
+    - Event handling involves assigning an expression as the value for the event attribute (`onClick={functionName}`)
+      - Unlike JavaScript, the expression should not be invoked in the assignment (this would be incorrect: `onClick={functionName()}`)
+      - The expression can be an anonymous function (ES5), arrow function (ES6), function, or expression (arrow function assigned to `const`)
