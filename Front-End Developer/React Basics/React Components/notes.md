@@ -55,5 +55,17 @@
   - Inline styling involves passing an object literal using JSX syntax to the "style" attribute (`style={{color: "red"}}`) on a JSX element
     - Hyphenated CSS properties use camelCase in JSX (`background-color` becomes `backgroundColor`)
   - A style object variable is essentially moving inline JSX styling to a variable (`const styles = {color: "red"}`) and assigning it as the value to the "style" attribute (`style={styles}`)
+- JavaScript provides multiple ways to declare a function
+  - Functions can be declared as `function functionName() { }`
+  - "Function Expressions" can be declared as `const variableName = function() { }` where the fuction is anonymous (nameless) and assigned to a variable
+  - "Arrow functions" (ES6) replace the `function` keyword with `=>` in the declaration `const variableName = () => { }`
+    - If there is only one parameter, the parenthesis can be excluded, such as `const variableName = props => { }`
+    - Single-line arrow functions have an "implicit return" meaning they do not need the `return` keyword and will return the single-line value
+    - Arrow functions are typically used when passing functions to other functions, such as in `.forEach(item => item)`
+      - This is useful when working with imported files such as images with `import imageName from './imageName.png'` where you need to assign them to an attribute such as `<img src={imageName}>`
+- "Embedded Expressions" in JSX is the practice of inserting JavaScript code in HTML, using curly brackets syntax `<p>{ ... }</p>`
+  - The return of a function can be embedded because functions are expressions even if they have no `return` because then the return is `undefined` by default
+  - Expressions can be embedded into the attribute of a HTML element by assigning the value as `attributeName={expression}` instead of `attributeName="value"`
+- "Ternary expressions" are a different way of writing if-else conditionals using syntax `condition ? expression : expression` where the 1st expression executes if true and the 2nd expression executes if false
 - "Pure functions" are functions that return a consistent and predictable output for the same argument values
   - Functional components should never modify their own props within the function
