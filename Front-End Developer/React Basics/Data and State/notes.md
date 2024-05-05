@@ -7,3 +7,39 @@
     - Event handling involves assigning an expression as the value for the event attribute (`onClick={functionName}`)
       - Unlike JavaScript, the expression should not be invoked in the assignment (this would be incorrect: `onClick={functionName()}`)
       - The expression can be an anonymous function (ES5), arrow function (ES6), function, or expression (arrow function assigned to `const`)
+- Data flows unidirectionally from parent element to child element in React
+  - A parent component is the functional component being declared and its children are any components rendered in its return
+  - Passing data unidirectionally enables a "single point of truth" for multiple instances, which reduces the chance of typing errors and is more efficient for often changed data
+  - JavaScript objects on the parent can be utilized to store data, and then passed to the child component
+    - Child component can receive data as attributes, which are accessible on its props parameter
+  - All data in React is either props or state data
+    - "Props" data is immutable data passed from a parent to a child component
+    - "State" data is mutable data stored inside a component
+- "Hooks" in React (added in version 16.8) are functions that hook into React state and lifecycle features from components
+  - Hooks can only be called at the top level of a component or hook, not inside loops or conditions, only React functions and not JavaScript functions
+  - The `useState` hook manages state within a component
+    - Imported with `import { useState } from 'react'`
+    - A state variable within a component is declared with `const [state, setState] = useState(initialState)` where `state` is the variable name, `setState` is a function to update the state value, and `initialState` is the initial value for the state variable
+      - This declaration is an example of "array destructuring" as `useState` returns an array where the first item is the state variable and the second item is the state function
+        - It is common practice to use lowercase for the first item (`state`) and then the second item is `set` + titlecase variable name (`setState`)
+    - The state update method cannot be invoked directly in the body of the functional component, and must instead be invoked somewhere such as in an event handler of a child element
+  - The `useRef` hook provides access to a child element
+    - Imported with `import { useRef } from 'react'`
+    - A reference is declared with `const referenceName = useRef(null)` where `referenceName` is the variable name and `null` is the initial value
+      - This variable can be added to a child element with the `ref={referenceName}` attribute
+        - When assigned as value to this attribute, the reference can be accessed elsewhere in the component as an object with `referenceName.current`
+  - The `useReducer` hook handles both state and actions that affect state
+    - Imported with `import { useReducer } from 'react'`
+    - A reducer is declared with `const [state, dispatch] = useReducer(reducer, initialState)` where `state` is the variable name, `dispatch` is a function to update the state value by passing an action object, `reducer` is a function that updates state based on an action object, and `initialState` is the initial value for the state variable
+      - The `reducer` function looks like `const reducer = (state, action) {}` and returns an updated state based on the contents of the action
+- "State" is the internal data in a component to determine its current behavior and affect its behavior
+  - Components can form a state hierarchy by passing state through `props` to child components, which will then update when the parent component state changes
+  - A component can maintain its own state through hooks ("stateful component") or receive its state through `props` ("stateless component")
+    - The choice of which type of component to build depends on whether state needs to be inherited/external (stateless) or can be handled internally (stateful)
+  - There are two approaches to managing state when sibling components need to access each others state
+    - First: "lifting state" refers to moving the state up to the parent component, such that its children have access to its state
+      - This causes the issue of "prop drilling" where the same state is passed through several layers of components through repeated use of the state in `props`, which is bad for scaling and performance
+    - Second: React's "Context" API can be used to elegantly provide child components access to parent state data without passing state through `props`
+      - This involves extracting state data to a separate file and then importing it into the child component that needs to access the data
+      - A "Context Provider" is constructed to provide the child components of the Provider with state data, and a component accessing the data becomes a "State Consumer"
+        - The `React.createContext()` and `React.useContext()` methods are utilized to construct a Context Provider component and export the context for use in components wrapped by the provider
