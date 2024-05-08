@@ -1,0 +1,56 @@
+- Modern navigation user interfaces are utility-focused
+  - The interface should be familiar to users
+  - Users shouldn't have to think to navigate
+  - Website navigation provides browsing through pages or links from a single component
+    - There are several implementations of this user interface pattern
+      - Horizontal navigation bar
+        - Often referred to as "navbar"
+      - Vertical navigation menu
+        - Also known as "sidebar" navigation
+      - Menu hiding behind button
+        - Usually represented with a "burger" icon consisting of three horizontal lines vertically stacked
+        - The "drop-down" navigation menu
+          - Also known as "mega menu"
+      - Footer navigation bar
+- Navigation in React does not happen across HTML files
+  - React only affects and updates within its single root, where the entire app is loaded
+    - The "React router" library makes it possible to imitate the multi-file website behavior
+      - Installed with `npm i react-router-dom`
+      - Imported in "index.js" with `import { BrowserRouter } from 'react-router-dom'`
+        - Provides element `<BrowserRouter>` which wraps around the React `<App>`
+      - Imported in `App.js` with `import { Routes, Route, Link } from 'react-router-dom'`
+        - Provides element `<Routes>` which wraps around the route elements to be rendered as pages
+          - Provides element `<Route path="/pageName" element={<ElementName />} />` where `path` is an attribute for the desired relative path and `element` is an attribute for the component to render for the path
+        - Provides element `<Link to="/pageName">` which is used in place of anchor tags
+  - Single-Page Applications (SPAs) such as React apps do not span multiple files, but instead update the rendered page content based on user interaction
+    - During this lifecycle, user interaction results in client-server requests and the response data is loaded into the application to re-render its contents
+      - The data can either be loaded with the initial request for the website ("bundling") or served as needed ("lazy loading"/"code splitting"), depending on the resulting performance
+    - Anchor tags (`<a></a>`) that would normally link between files wouldn't work for an SPA, but similar behavior can be mimiced by the virtual DOM
+- "Conditional rendering" is the concept of rendering elements (or attribute values and content) based on the value of a State variable
+  - "Ternary operators" (`statement ? ifTrue : ifFalse`) can be used to conditionally render two states
+  - The AND operator (`variableName && { <ComponentName>{variableName}</ComponentName }`) can be used to conditionally render a component or element based on the assignment of a value to the variable
+    - This prevents the rendering of uninitialized variables
+- Assets are files needed at runtime and they are imported into React apps
+  - Image, video, and audio files are assets that can either be imported or reference by relative path
+    - Imported using `import fileName from './assets/fileName.png`
+    - Referenced using the "require" method `require('./assets/fileName.png)`
+    - The `<video>` tag or "react-player" package from NPM can be used to render video
+      - Imported using `import ReactPlayer from "react-player"` where the path can be limited to specific services such as `"react-player/youtube"` to reduce bundle size
+  - Stylesheets and fonts can be assets
+  - Assets that are accessed at runtime (such as favicons) rather than when compiled can be placed in the "public folder"
+  - Assets that are required when compiling the React app should be in an "assets" folder in the "src" folder
+  - As assets are imported into a React app, and those assets import other assets, a "dependency graph" is formed by this increasingly complex chain of dependencies
+    - This necessitates the need for creating a "bundle" of files from asset files to JavaScript files
+      - "Webpack" is a "module bundler" that is built-in when using `create-react-app`
+        - Builds a dependency graph and bundles modules into one or more files
+        - Provides backwards compatibility by converting JS code from newer versions into older versions
+        - Optimizes performance of code
+        - Processes SCSS into CSS
+        - Builds source maps for bundle building blocks
+        - Handles procurement of files based on rules and templates
+        - Provides a "development mode" and "production mode"
+          - Development mode is optimized for fast updates to bundles, and it builds source maps so developers can inspect bundle contents
+          - Production mode is optimized for fast access to website content and lower memory usage, achieved by minifying code which reduces unnecessary characters to increase download speed
+        - Code splitting is a process by which multiple bundles are created and only downloaded as needed, and the amount of bundles increases with the complexity of the application, to ensure that accessing the website does not require an initial slow and large downloaded bundle
+          - "Server-side rendering" (SSR) is an alternative to code splitting, where server-driven injections of code are made by React to the root HTML element
+            - An "isomorphic app" combines both client-side and server-side rendering
