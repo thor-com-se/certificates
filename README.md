@@ -3,7 +3,6 @@
 
 - [Front-End Developer (Meta)](#front-end-developer-meta)
 - [Back-End Developer (Meta)](#back-end-developer-meta)
-- [Icelandic 1 (A1.1)](#icelandic-1-a11)
 
 ## Front-End Developer (Meta)
 
@@ -17,6 +16,15 @@
 
 *Not yet issued*
 
+<!-- omit in toc -->
+### Courses
+
+- [Introduction to Front-End Development](https://www.coursera.org/account/accomplishments/records/65ENNUWMS2L3)
+- [Programming with JavaScript](https://www.coursera.org/account/accomplishments/records/C649GETGFY22)
+- [Version Control](https://www.coursera.org/account/accomplishments/records/UXYPSMTYUTAP)
+- [HTML and CSS in depth](https://www.coursera.org/account/accomplishments/records/WJ8J5SY7T4E6)
+- [React Basics](https://www.coursera.org/account/accomplishments/records/5BKDSZTH8PMS)
+
 ## Back-End Developer (Meta)
 
 <!-- omit in toc -->
@@ -29,14 +37,7 @@
 
 *Not yet issued*
 
-## Icelandic 1 (A1.1)
-
 <!-- omit in toc -->
-### Description
+### Courses
 
-[https://www.multimal.org](https://www.multimal.org)
-
-<!-- omit in toc -->
-### Certificate
-
-*Not yet issued*
+- [Introduction to Back-End Development](https://www.coursera.org/account/accomplishments/records/6H3RNVJUP5Q8)
