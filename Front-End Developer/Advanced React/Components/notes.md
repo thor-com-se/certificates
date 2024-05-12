@@ -1,0 +1,15 @@
+- Data retrieved from a third party source often needs to be transformed, as it contains more data than needed or is a different shape than desired
+  - The `.map()` array method in JavaScript transform data by passing a function that reshapes the data (`array.(map(element => {...}))`)
+- In React, elements in an array can be transformed into HTML list elements by returning elements to `<li></li>` in a `.map()` call
+- React applies its "Diffing algorithm" when computing a change in the UI, to calculate the minimal number of changes necessary to update the tree of components.
+  - In some cases React can't make the assumptions to find the most optimal path for an update, so the developer needs to differentiate the code
+  - React would have to mutate every child element of a parent element when a new first child is inserted into the parent
+    - The `key` attribute of React elements should contain a unique ID, which enables the algorithm to identify elements, to avoid mutating an element when it changes position
+      - The item index can be the key as a last resort, when no other key exists for the item
+        - Not recommended when items may be reordered as the index would not follow the repositioned element
+          - This can cause uncontrolled elements to not be repositioned as desired
+        - Negatively affects performance and may cause interface glitches if not correctly implemented
+      - A randomized number and other methods that avoid key collision should not be used, as these will be recalculated on re-renders and cause the elements to be mutated by the algorithm
+- React state should never be mutated directly, and only updated using its state update function
+  - As the `.reverse()` array method for reversing the elements in an array directly mutates the array, updating an array state variables requires destructuring (`setState([...state].reverse())`) to make a reversed array copy
+- 
