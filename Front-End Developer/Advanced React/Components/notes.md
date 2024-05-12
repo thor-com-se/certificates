@@ -1,7 +1,7 @@
 - Data retrieved from a third party source often needs to be transformed, as it contains more data than needed or is a different shape than desired
   - The `.map()` array method in JavaScript transform data by passing a function that reshapes the data (`array.(map(element => {...}))`)
 - In React, elements in an array can be transformed into HTML list elements by returning elements to `<li></li>` in a `.map()` call
-- React applies its "Diffing algorithm" when computing a change in the UI, to calculate the minimal number of changes necessary to update the tree of components.
+- React applies its "Diffing algorithm" when computing a change in the UI, to calculate the minimal number of changes necessary to update the tree of components
   - In some cases React can't make the assumptions to find the most optimal path for an update, so the developer needs to differentiate the code
   - React would have to mutate every child element of a parent element when a new first child is inserted into the parent
     - The `key` attribute of React elements should contain a unique ID, which enables the algorithm to identify elements, to avoid mutating an element when it changes position
@@ -12,4 +12,18 @@
       - A randomized number and other methods that avoid key collision should not be used, as these will be recalculated on re-renders and cause the elements to be mutated by the algorithm
 - React state should never be mutated directly, and only updated using its state update function
   - As the `.reverse()` array method for reversing the elements in an array directly mutates the array, updating an array state variables requires destructuring (`setState([...state].reverse())`) to make a reversed array copy
-- 
+- Uncontrolled components have their [form] data (`value` property) handled by the non-virtual DOM, just like a standard HTML element (such as `<input>`)
+  - Their value can be retrieved using `useRef` and the `ref` property from React
+  - The `<input>` type "file" is always unctronolled because its value is read-only and can't be set programmatically, and as such must be referenced
+- Controlled components have their [form] data (`value` property) handled by React state, which is ideal for most form elements (such as `<input>`) in a form that needs to respond in sync with user input
+  - Provides features such as instant field validation, conditional submit button, specific input formats, several inputs for the same data, and dynamic inputs
+  - React state is the single source of truth, controlling the displayed value of form elements
+  - The `value` property performs state delegation
+    - Local state is assigned to the value property
+  - An `onChange` callback property receives an event parameter which is an event object representing an action (such as a keystroke) on a form element
+  - An `onSubmit` callback property receives an event parameter which is an event object representing submission of the form's contents, and can execute any function that needs to be called when the form is submitted
+    - Default HTML form behavior (calling the server root and refreshing the page) can be prevented in this function with a call `event.preventDefault()` where `event` is the event object resulting from form submission
+    - The `disabled` tag can be used on form elements such as this, with a conditional value (that could check the updated state), to disable the element based on a successful form submission
+    - It is good practice to reset the value of form elements after successful submission, by resetting the delegated state properties
+  - The `for` keyword is reserved in React, so the attribute for `<label>` is `htmlFor`
+    - This can be used to focus an `<input>` when the corresponding `<label>` is clicked
