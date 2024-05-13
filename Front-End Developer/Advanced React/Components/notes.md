@@ -21,9 +21,30 @@
   - The `value` property performs state delegation
     - Local state is assigned to the value property
   - An `onChange` callback property receives an event parameter which is an event object representing an action (such as a keystroke) on a form element
+  - An `onBlur` callback property receives an event parameter which is an event object representing focus on a form element, such as an active `<input>` element of `type="password"`
   - An `onSubmit` callback property receives an event parameter which is an event object representing submission of the form's contents, and can execute any function that needs to be called when the form is submitted
+    - An `<input` inside a form that represents a submission button should have `value="Submit"` rather than `type="submit"` to call the `onSubmit` of the form
     - Default HTML form behavior (calling the server root and refreshing the page) can be prevented in this function with a call `event.preventDefault()` where `event` is the event object resulting from form submission
+      - This is useful when you want to validate form data client-side before interacting with the server
     - The `disabled` tag can be used on form elements such as this, with a conditional value (that could check the updated state), to disable the element based on a successful form submission
     - It is good practice to reset the value of form elements after successful submission, by resetting the delegated state properties
   - The `for` keyword is reserved in React, so the attribute for `<label>` is `htmlFor`
     - This can be used to focus an `<input>` when the corresponding `<label>` is clicked
+- Props and State are both plain JavaScript objects used by React to influence the render output, and they are deterministic (will always generate the same output for the same values)
+  - Props is passed to a component and should not be altered (mutated) in the component
+    - Represents a component's configuration
+  - State` is managed within a component and can be altered (mutated) in the component
+    - It is private to the component where it is declared
+    - Is given an initial value (including no value) and then reassigned based on user interaction
+    - A serialize representation (snapshot) of a point in time
+    - "Stateless" components have no state, as it is optional
+    - "Stateful" components have both state and props
+- "Context" API solves the prop drilling problem in React when accessing global data in heavily nested components
+  - The `createContext` method in React creates a Context
+    - A "Provider" component is made from the instantiated Context with `<ContextName.Provider>` where attribute `value` has a state delegation value created with `useState`
+      - The `useContext` method in React should be instantiated in a function exported along with the Provider component, in order for nested components to access the Context
+- React re-renders child components of a Context Provider when the injected props are updated
+  - This behavior can be prevented by wrapping a child component in `React.memo(() => <ComponentName />)` and is useful for improving performance when a component does not change based on the injected props
+    - An optional second argument can be provided to define custom logic for re-rendering based on previous and current props
+- The `useMemo` hook in React can be used to declare Context Provider props to avoid re-rendering child components when the App re-renders but the props do not change
+  - As objects in JavaScript are compared based on their "reference", even though the props objects are the same, the comparison will return `false` and result in a re-render, unless the hook is used

@@ -80,7 +80,7 @@ function App() {
             <label>
               Password <sup>*</sup>
             </label>
-            <input type="password" placeholder="Password" value={password.value} onChange={e => setPassword({value: e.target.value, isTouched: true})} />
+            <input type="password" placeholder="Password" value={password.value} onBlur={e => setPassword({...password, isTouched: e.target.value})} onChange={e => setPassword({...password, value: e.target.value})} />
             {password.isTouched && password.value.length < 8 && (<PasswordErrorMessage />)}
           </div>
           <div className="Field">
