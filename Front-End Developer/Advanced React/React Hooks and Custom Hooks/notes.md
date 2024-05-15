@@ -1,0 +1,21 @@
+- "Pure functions" always return the same value for the same parameters, and as such do not have "side effects"
+  - "Side effects" make a function "impure" by having an impact that is external to the function, such as invoking `console.log` (which is global object), invoking fetch, or invoking geolocation
+- Functional components are a more modular alternative to class components
+- Hooks provide functional components the functionality of class components
+  - The `useState()` hook returns a two-member array, so array destructuring is used to declare it as a variable and a function (`const [state, setState] = useState()`)
+    - Objects are an ideal type to use as state value
+      - Individual properties can be updated using the "spread operator" (`...`)
+        - This can be done by copying the state object (`const stateCopy = {...state}; stateCopy.propertyName = value; setState(stateCopy)`) to avoid updating the entire object
+        - This can be done using an "arrow function" as React provides the state update function with the current state as an argument (`setState(prevState => ({...prevState, propertyName: value}))`)
+          - The property can be an event, which has its property destructured into an array such as in `setState({...state, [event.target.name]: event.target.value})`
+      - It is not possible to update a state object declared with `const` without copying the object as this will throw a `TypeError`
+      - It is not possible to reassign a property on the state object directly (`state.propertyName = value`) as state must be updated through its function
+  - The `useEffect()` hook handles impure functionality such as `console.log` (method call on global object)
+    - The syntax is `useEffect(() => console.log, [])` where `[]` is an array of dependencies that determine when to execute the function, by default this is executed on component mounting and re-renders
+      - Optionally a function can be returned within the function, which will be executed when the component re-renders (based on dependencies) or unmounts, and is useful for performing cleanup actions
+    - Related logic should be grouped into the same effect
+    - Unrelated logic should be separated into multiple effects to separate concerns
+- Arrays can be destructured into variables using any variable name for an element
+- Objects can only be destructured into variables using a variable name that matches a property name
+- State can be passed from child to parent component by calling a function on `props` that passes state data (`props.doSomething(state)`), which will then be available to the parent as an attribute of the child (`<ChildComponent doSomething={state => ()} />`)
+  - This state of the child component can be used to update a state variable in the parent
