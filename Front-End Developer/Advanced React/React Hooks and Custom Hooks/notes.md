@@ -1,7 +1,10 @@
 - "Pure functions" always return the same value for the same parameters, and as such do not have "side effects"
-  - "Side effects" make a function "impure" by having an impact that is external to the function, such as invoking `console.log` (which is global object), invoking fetch, or invoking geolocation
+  - "Side effects" make a function "impure" by having an impact that is external to the function, such as invoking `console.log` (which is global object), invoking fetch, invoking geolocation, or modifying the `document` object
 - Functional components are a more modular alternative to class components
 - Hooks provide functional components the functionality of class components
+  - Hooks should be instantiated from the top level of a React component function or a custom hook
+  - Multiple hooks can be called in the same component function, but this sequence should not be conditional such that it changes from render to render
+    - The conditional logic (determining whether state is updated) should be inside the hook function
   - The `useState()` hook returns a two-member array, so array destructuring is used to declare it as a variable and a function (`const [state, setState] = useState()`)
     - Objects are an ideal type to use as state value
       - Individual properties can be updated using the "spread operator" (`...`)
@@ -19,3 +22,11 @@
 - Objects can only be destructured into variables using a variable name that matches a property name
 - State can be passed from child to parent component by calling a function on `props` that passes state data (`props.doSomething(state)`), which will then be available to the parent as an attribute of the child (`<ChildComponent doSomething={state => ()} />`)
   - This state of the child component can be used to update a state variable in the parent
+- The "Fetch" API in JavaScript is a set of functionalities for making server requests
+  - `fetch()` is a function that retrieves data (JSON) through a server request
+    - This is a browser API external/separate from JavaScript, and is a "facade function" that looks like JavaScript but is actually a browser API call
+    - The `.then()` method on `fetch()` initiates a request and upon completion handles a `response` argument representing the response
+      - Another `.then()` call after completion of the first call handles a `data` argument representing the response data
+  - JavaScript is not equipped for multitasking (multithreaded operations) as it is limited to singlethreaded execution
+    - Asynchronous JavaScript involves executing a series of processes after each previous process completes or executing multiple processes at once and then awaiting completion until continuing other processes
+- 
