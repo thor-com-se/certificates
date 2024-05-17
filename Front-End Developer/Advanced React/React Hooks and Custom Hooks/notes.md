@@ -23,10 +23,13 @@
 - State can be passed from child to parent component by calling a function on `props` that passes state data (`props.doSomething(state)`), which will then be available to the parent as an attribute of the child (`<ChildComponent doSomething={state => ()} />`)
   - This state of the child component can be used to update a state variable in the parent
 - The "Fetch" API in JavaScript is a set of functionalities for making server requests
-  - `fetch()` is a function that retrieves data (JSON) through a server request
+  - `fetch()` is a function that fetches data through a server request
     - This is a browser API external/separate from JavaScript, and is a "facade function" that looks like JavaScript but is actually a browser API call
-    - The `.then()` method on `fetch()` initiates a request and upon completion handles a `response` argument representing the response
+    - The `.then()` method on `fetch()` handles the response with a `response` argument representing the response data, which can be parsed as JSON with `response => response.json()`
       - Another `.then()` call after completion of the first call handles a `data` argument representing the response data
+      - The `.catch` method on `fetch()` handles an `error` argument representing any error thrown
   - JavaScript is not equipped for multitasking (multithreaded operations) as it is limited to singlethreaded execution
     - Asynchronous JavaScript involves executing a series of processes after each previous process completes or executing multiple processes at once and then awaiting completion until continuing other processes
-- 
+- Fetching data from a third-party API in a React component function is considered a side effect, so it should be done with a `useEffect` hook
+  - The "Fetch" API is used within an anonymous function call inside the hook
+  - It is advised to instantiated a data fetching call as an arrow function `const` and then call it from within the hook
