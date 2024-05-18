@@ -1,0 +1,13 @@
+- JSX is a syntax extension to JavaScript, used by React to describe how the UI should look
+  - Looks like HTML but is an abstraction combining markup and business logic into a "component"
+    - The UI in React is structured into a tree of components
+    - React produces pure HTML, CSS, and JavaScript from its JSX components
+  - An "element" in React is a JavaScript object that describes the hierarchy of HTML output as a plaint object
+    - Similar to the component tree hierarchy, but each node represents a plain object describing a component instance or DOM node and its desired properties
+    - The main attributes are `type` for the HTML element type and `props` for the passed properties (attributes) (including `children`)
+      - The `type` can also be a function corresponding to a React component rather than an HTML element type such as `<button>`
+        - React identifies the components in the JSX tree and converts them to DOM elements, and this allows the mixing of components and HTML elements, resulting in the virtual DOM (JavaScript representation of the real DOM)
+    - When re-rendering the UI, React's "diffing" operation compares the new JSX tree to the previous JSX tree, calculates the difference between the versions, and then applies the minimum changes necessary for implementing the update
+- React's composition model provides two key features: "containment" and "specialization"
+  - "Containment" refers to components that are generic because they do not know what `children` will be contained within them
+  - "Specialization" refers to components that are special cases of othe components, such as a button component that is a special case of a generic button component
