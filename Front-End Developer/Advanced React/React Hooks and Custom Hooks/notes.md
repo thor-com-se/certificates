@@ -18,6 +18,18 @@
       - Optionally a function can be returned within the function, which will be executed when the component re-renders (based on dependencies) or unmounts, and is useful for performing cleanup actions
     - Related logic should be grouped into the same effect
     - Unrelated logic should be separated into multiple effects to separate concerns
+  - The `useReducer()` hook is an alternative when working with complex state logic and/or state value depends on previous value
+    - Instantitiated with an initial state and a "reducer function" that describes how state should be updated based on value
+      - The reducer function's 2nd argument is the "action object" for which "dispatch" can be invoked to perform actions
+        - The `dispatch()` method receives an object literal as argument representing an action, which is interpreted by the reducer function to determine how state should be updated
+  - The `useRef()` hook facilitates access to an underlying DOM node
+    - Instantiated with an argument of type `null`
+    - Assigned to a variable and then the variable is referenced in the `ref={}` attribute of the DOM node
+    - Returns a value of type object and the DOM node is accessed with `variableName.current` and methods such as `.focus()` for `<input ref={variableName}>`
+- Custom hooks package built-in React hooks such that the same functionality is declared once and reusable in multiple instances
+  - Declared as a function that follows the camelCase naming scheme starting with `use`
+  - An example is a custom hook that console logs a changing state variable: `const useConsoleLog = state => { useEffect(() => {console.log(state)}, [state]) }`
+  - Called like a normal function in place of a hook in a component function
 - Arrays can be destructured into variables using any variable name for an element
 - Objects can only be destructured into variables using a variable name that matches a property name
 - State can be passed from child to parent component by calling a function on `props` that passes state data (`props.doSomething(state)`), which will then be available to the parent as an attribute of the child (`<ChildComponent doSomething={state => ()} />`)
