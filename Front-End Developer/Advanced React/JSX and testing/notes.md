@@ -30,3 +30,15 @@
   - React provides a pattern for using the spread operator for declaration of element attributes, such that `<ElementName attributeName={value}>` can be `<ElementName {...objectName}>` where the object has the same properties as would be declared as attributes
     - Additional attributes can be declared as normal, which enables specification through componentization
     - The order of the attributes declaration determines whether the spread operator overrides other attributes
+- "Cross-cutting concerns" is generic functionality that is not related to application business logic, such as handling permission roles, handling errors, and logging
+  - "Higher order component" (HOC) is an advanced pattern for a function that takes a component as input, extends the component with enhanced functionality, then returns a new component
+    - This is useful as an alternative to custom hooks which transform stateless components into stateful components
+    - Uses a special syntax for passing a component and the functions the hooks utilize when extending component functionality
+      - An example would be `const withAddedFunctionality = ComponentName => { return (props) => { return <ComponentName /> } }`
+      - Component passed to HOC should never be mutated inside the HOC
+      - Props should be passed through from input to output component (using spread operator) with minimal changes
+    - A functional programming pattern called "currying" (used in React Redux) is used for maximizing function composition
+      - An example is the HOC declared as `connect(selector, actions)(ComponentName)` which is equal to `const HOC = connect(selector, actions); HOC(ComponentName)`
+      - "Single-argument" HOCs convert an input component to an enhanced output component, which makes them easy to compose together such as in `compose(withAddedFunctionality, withEnhancement, connect(selector))`, which can then be used with an input component to enhance its functionality
+    - HOC should not be declared in the scope of a component, as the enhanced component will differ between re-renders which forces React to remount and erase previous state
+    - React `refs` are not handled by props so they will not be passed through a HOC, but there exists a `React.forwardRef` API for handling this case
