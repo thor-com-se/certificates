@@ -11,3 +11,22 @@
 - React's composition model provides two key features: "containment" and "specialization"
   - "Containment" refers to components that are generic because they do not know what `children` will be contained within them
   - "Specialization" refers to components that are special cases of othe components, such as a button component that is a special case of a generic button component
+- There are serveral types that can be passed to the `children` prop of a JSX expression
+  - String literals can be passed but JSX will remove: leading and trailing whitespaces, lines adjacent to tags, and newlines inside the string
+  - JSX elements such as `<div>` can be passed
+  - React fragments (`<React.Fragment>` or `<>`) can wrap children
+    - This is useful when returning multiple JSX elements without adding extra nodes to the DOM
+  - JavaScript expressions can be passed by wrapping in curly brackets (`<div>{''}</div>`)
+  - Functions can be passed, in which case they will function like any other prop
+  - Booleans, Null and Undefined can be passed but will be ignored
+- React can be imported in a .js file as a whole global object with `import React from 'react'` or individual functions as a named import with `import { functionName } from 'react'`
+- The `children` prop in a React component can be dynamically transformed
+  - The `React.cloneElement(element, [props])` top-level API clones a React element into a copy, where `element` is the element and `[props]` is any new props that will be merged into existing props on the element
+    - Useful for modifying children properties, adding to children properties, or extending functionality of children components
+  - The `React.Children` top-level API provides utilities for dealing with transformation of the children prop structure (such as `.map()`)
+- As `props` is an object, an object can be declared instead of declaring `props` as the argument for a functional component (`const ComponentName = ({ children }) => {}`)
+- The "spread operator" (`...`) can copy an object (such as `props`) by spreading the properties with `...objectName`
+  - This can be leveraged to copy and then update properties when instantiating a new object with `{ ...objectName, propertyName: value }`
+  - React provides a pattern for using the spread operator for declaration of element attributes, such that `<ElementName attributeName={value}>` can be `<ElementName {...objectName}>` where the object has the same properties as would be declared as attributes
+    - Additional attributes can be declared as normal, which enables specification through componentization
+    - The order of the attributes declaration determines whether the spread operator overrides other attributes
