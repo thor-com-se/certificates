@@ -32,7 +32,7 @@
     - The order of the attributes declaration determines whether the spread operator overrides other attributes
 - "Cross-cutting concerns" is generic functionality that is not related to application business logic, such as handling permission roles, handling errors, and logging
   - "Higher order component" (HOC) is an advanced pattern for a function that takes a component as input, extends the component with enhanced functionality, then returns a new component
-    - This is useful as an alternative to custom hooks which transform stateless components into stateful components
+    - This is useful as an alternative to custom hooks as that requires any component that uses the custom hook to be transformed from stateless to stateful
     - Uses a special syntax for passing a component and the functions the hooks utilize when extending component functionality
       - An example would be `const withAddedFunctionality = ComponentName => { return (props) => { return <ComponentName /> } }`
       - Component passed to HOC should never be mutated inside the HOC
@@ -42,3 +42,7 @@
       - "Single-argument" HOCs convert an input component to an enhanced output component, which makes them easy to compose together such as in `compose(withAddedFunctionality, withEnhancement, connect(selector))`, which can then be used with an input component to enhance its functionality
     - HOC should not be declared in the scope of a component, as the enhanced component will differ between re-renders which forces React to remount and erase previous state
     - React `refs` are not handled by props so they will not be passed through a HOC, but there exists a `React.forwardRef` API for handling this case
+    - It is recommended that HOCs are named starting with `with` and using camelcase, as this expresses the enhancing nature of HOCs
+    - A functional component enhanced with an additional prop through a HOC can access that property through its props object declaration, similar to how `children` is accessed in a functional component
+  - "Render props" is a technique where a `render` prop of type function is passed to a functional component (`<ComponentName render={data => (<p>Information: {data.information}</p>)} />`) and then called with data from inside the component in the return of the component
+    - An example is a component that fetches data based on an input `url`, passes the data with a `return render(data)` call, and then the data is handled in the `render={data => ()}` attribute of the component instance to dynamically render a JSX element
