@@ -46,3 +46,27 @@
     - A functional component enhanced with an additional prop through a HOC can access that property through its props object declaration, similar to how `children` is accessed in a functional component
   - "Render props" is a technique where a `render` prop of type function is passed to a functional component (`<ComponentName render={data => (<p>Information: {data.information}</p>)} />`) and then called with data from inside the component in the return of the component
     - An example is a component that fetches data based on an input `url`, passes the data with a `return render(data)` call, and then the data is handled in the `render={data => ()}` attribute of the component instance to dynamically render a JSX element
+- "Automation tests" help with discovering bugs/defects, ensuring sofware quality, and saving resources, before deployment to production
+  - Best practices for writing tests are to avoid including implementation details by working with actual DOM nodes rather than instances of React components, tests should resemble software usage, and tests should be maintainable in the long run
+  - "React Testing" library is a set of utilities for testing React components without relying on implementation details, and this library fulfils all the test best practices
+    - Imported with `import { render } from "@testing-library/react"` where `render` is a function for rendering the component to be tested and asserted against
+      - Library also exports a `screen` object which is a reference to the `document.body` body and has every query pre-bound to the whole document when performing a search
+  - "Jest" (JavaScript test runner) provides an artificial DOM called "jsdom", good iteration speed, and powerful features such as "mocking"
+    - "Mocking" is an imitation that allows complex code to be replaced with similar but simpler code
+      - A "mock function" is created in Jest with `const functionName = jest.fn()` and used to track how a function is called by external code
+    - Test file for a component can be named as `ComponentName.test.js`
+    - Jest automatically injects global functions such as `test` and `expect` into any files
+    - The `describe` function wraps one or more `test` calls to describe the context
+    - The `test` function takes two arguments: a description of the test and a function
+      - In this function the `render` method is called on a React component followed by an assertion with the `expect` function
+      - The React Testing `screen` utility object and `fireEvent` method can be used in a `test` to simulate interaction with the UI and test for expected changes
+        - An error is thrown if there is no element found with one of the querying methods on the `screen` object, such as `screen.getByRole()` and `screen.getByLabelText()`
+          - The `screen.getByLabelText()` selects a `<label>` element but returns the corresponding `<input>` element
+        - `fireEvent.change(input, { target: { value: value } })` can be used on an input element found with a method on `screen` (such as `screen.getByLabelText()`) to update its value
+        - `fireEvent.click(screen.getByRole("button"))` would identify elements by their `role="button"` attribute and perform a click event
+        - `expect(functionName).not.toHaveBeenCalled()` tests for the expectation that the aforementioned mock function was not called by external code during a test of the UI
+- "Continuous Integration" (CI) is a software development technique where developers iteratively and often push changes to a shared version control system, rather than pushing changes at the end of the development cycle
+  - Each version control merge triggers an automated set of scripts to automatically build and test the application
+  - The CI pipeline builds the updated code on the server, runs automated tests, alerts the developer in case of errors and then the developer fixes the errors
+    - The next stage is deployment of a new software version to the staging server, where the internal Quality Assurance (QA) team can verify changes in a production-like environment
+- "Style guides" contain rules about how to write code, such as whether to use single or double quotes, levels of indentation, maximum line length etc.
