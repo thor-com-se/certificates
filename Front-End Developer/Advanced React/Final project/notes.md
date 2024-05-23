@@ -1,0 +1,30 @@
+- There are several popular external libraries for React
+  - "Chakra UI" is a UI library, providing a set of robust, well-tested and highly configurable pre-built components
+    - A simple, modular and accessible component library
+    - Its component act as "atoms" or building blocks for creating more complex components
+    - Components are grouped categories such as layout, forms, data display, feedback, typography and overlay
+      - Layout components set virtual delimiters/boundaries for content, manage the layout of children (row or column) and properties such as spacing between them
+        - `<HStack>` and `<VStack>` are components for rendering elements stacked horizontally or vertically using flex, with a `spacing` prop for setting the space between elements
+        - `<Box>` is a component for rendering a box with background color, border, shadow etc, with a `bg` prop for setting the background color
+      - Typography components are used for text-related content
+        - `<Heading>` is a component for rendering DOM header tags (h1, h2, h3) and provides a `size` prop (`2xl`) for the size of the font and a `as` prop for the semantic HTML tag (`h2`)
+        - `<Text>` is a component for rendering text within an interface, and provides a `fontSize` prop (`lg`) for the size of the font
+    - Components use "style props" to provide css directives
+      - camelCase versions of css styles (such as `backgroundColor`/`bg` for `background-color`) can be assigned on Chakra components to add styling
+  - "Formik" is an open-source library for creating forms, with the library handling the repetitive tasks of managing form state, validation, and submission
+    - Provides a set of components and hooks for plugging into forms
+    - Built-in support for schema based form-level validation through Yup
+    - `useFormik()` is a hook for handling all different form states, and its argument is a configuration object
+      - The configuration object has the properties:
+        - `initialValues` object for initial form field values
+        - `onSubmit` for a function to call on submission of the form with form values as argument
+        - `validationSchema` which is a Yup object/schema for validating form fields
+      - The hook returns an object with the properties:
+        - `values` object for current form field fields
+        - `errors` object for current form field errors
+        - `touched` object describing whether form fields have been focused at least once
+        - `getFieldProps` for a function that takes a field name as argument and returns an object with properties `name`, `value`, `onChange` and `onBlur`
+        - `handleSubmit` for a function that is called when the form is submitted, which takes an event as argument and calls `onSubmit` with the `values` object as argument
+          - This should be hooked to the form `onSubmit` event
+  - "Yup" is a JavaScript open-source library for validating form data before submission to a server
+    - Provides a set of chainable operators that can be applied to form fields to declaratively specify validation rules
