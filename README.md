@@ -24,6 +24,7 @@
 - [Version Control](https://www.coursera.org/account/accomplishments/records/UXYPSMTYUTAP)
 - [HTML and CSS in depth](https://www.coursera.org/account/accomplishments/records/WJ8J5SY7T4E6)
 - [React Basics](https://www.coursera.org/account/accomplishments/records/5BKDSZTH8PMS)
+- [Advanced React](https://www.coursera.org/account/accomplishments/records/T4ENXQ7P4AG4)
 
 ## Back-End Developer (Meta)
 
