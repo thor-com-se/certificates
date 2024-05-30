@@ -1,0 +1,22 @@
+- UX and UI design are human-centered disciplines
+- A lack of UX principles applied to UI design can create extra cognitive load on users
+- Producer designers think holistically about problems
+  - They question why products are made and who they serve
+  - Designers are not users, so it's important to talk to users, emphasize with users, and to question assumptions about users
+  - Collaboration between designers and developers helps both understand and weigh the consequences of an implementation and alternative solutions
+- The role of types of designers varies between companies
+  - In the Little Lemon example, the UX is the questions asked about customers
+    - What do they need?
+      - What stops them from getting it?
+    - How intuitive is the website?
+    - Can they go from one section to another quickly and efficiently?
+  - In the Little Lemon example, the UI is what the users see
+    - The website and its elements are the primary destination
+      - Types, colors, buttons, shapes, icons, images
+      - Elements should be grouped and assembled correctly
+      - Users should be helped to achieve their goals
+      - Should adhere to the brand
+  - UX designers can perform user research and produce prototypes to iteratively make suggestions
+  - UI designers create logical and beautiful layouts, informed by a systemized design library
+  - Designers in small companies may need to perform several roles covering both UX and AI, but as the company size increases designers become more specialized and perform more niche roles
+- Product managers handle communication between roles and teams, and the strategy necessary for succeeding in product development
