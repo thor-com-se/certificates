@@ -62,3 +62,4 @@
         - This is followed by a scenario analysis, contextualizing user goals and walking through the steps taken by the user
     - "Storyboards" are visual representations of user interactions with a product, and can be sketches, illustrations, screenshots, slideshows, animations, or live demos
       - Created by defining the persona, the environment they are in, adn the plot of what they want to achieve
+    - "Wireframes" are visual representations of the user interface, primarily concerned with the placement and hierarchy of content and functionalities
