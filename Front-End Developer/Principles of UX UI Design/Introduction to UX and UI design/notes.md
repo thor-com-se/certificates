@@ -20,7 +20,7 @@
   - UI designers create logical and beautiful layouts, informed by a systemized design library
   - Designers in small companies may need to perform several roles covering both UX and AI, but as the company size increases designers become more specialized and perform more niche roles
 - Product managers handle communication between roles and teams, and the strategy necessary for succeeding in product development
-- "UX" was coined by Don Norman to describe the experience of purchasing from a store
+- "UX" (User Experience) was coined by Don Norman to describe the experience of purchasing from a store
   - UX has been refined into an iterative design process
     - Observing a task performed by users
     - Identifying user problems
@@ -63,3 +63,22 @@
     - "Storyboards" are visual representations of user interactions with a product, and can be sketches, illustrations, screenshots, slideshows, animations, or live demos
       - Created by defining the persona, the environment they are in, adn the plot of what they want to achieve
     - "Wireframes" are visual representations of the user interface, primarily concerned with the placement and hierarchy of content and functionalities
+- "UI" (User Interface) refers to how people interface or communicate with each other and with products such as email, text messages, or printers
+  - Users use interfaces to achieve tasks, such as receiving directions, taking online classes, or ordering food
+  - "GUI" (Graphical User Interface) provides a visual interface through a screen for users to communicate with technology, and is often synonymous with "UI" in design
+    - It's how information is structured, the icons, colors, text, shapes, and the information
+    - It's what happens when you tap or click something
+  - Interfaces are about tasks, such as driving where the user interface is the dashboard providing information and updating based on user actions such as pressing the gas pedal
+  - Intuitiveness can be crucial in user interfaces, as providind the right information at the right time can be critical in some situations such as medical emergencies or natural disasters
+  - "Digital design" encompasses several types of design: UI design, UX design, CX design, and service design
+    - "Service design" takes into account all points-of contact between a company and customers, both analog and digital
+    - "CX design" (Customer Experience design) is about all interactions between the service provider and customer for a particular service or brand
+    - "UX design" (User Experience design) is about interactions between user and a specific touchpoint
+    - "UI design" (User Interface design) is about the usability, conversion, look and feel etc. of interfaces
+  - "User-centered design" (UCD) is an iterative process that keeps the user centered throughout the process by considering the needs, wants, and limitations of end-users at each stage of the design process
+  - "Design thinking" is a process for solving creative problems consisting of the five phases: emphasize, define, ideate, prototype and test
+    - "Emphasize" means to relate to the problem that is being solved
+    - "Define" means to analyze and synthesize observations into a problem statement of what the user wants and why they want it
+    - "Ideate" means to think about how to solve the problem statement
+    - "Prototype" means a draft of the solution at any level of fidelity
+    - "Test" means involving users with the prototype to test if it solves the problem statement, and then repeating this design cycle with the feedback
