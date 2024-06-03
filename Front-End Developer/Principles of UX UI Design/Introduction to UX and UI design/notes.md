@@ -20,3 +20,45 @@
   - UI designers create logical and beautiful layouts, informed by a systemized design library
   - Designers in small companies may need to perform several roles covering both UX and AI, but as the company size increases designers become more specialized and perform more niche roles
 - Product managers handle communication between roles and teams, and the strategy necessary for succeeding in product development
+- "UX" was coined by Don Norman to describe the experience of purchasing from a store
+  - UX has been refined into an iterative design process
+    - Observing a task performed by users
+    - Identifying user problems
+    - Generating ideas for how to solve problems
+    - Prototyping an implementation
+    - Testing the solution
+  - The standard process is emphasize, define, idea, prototype, test
+  - "Usability" is an essential UX concept to gauge how easy and intuitive a product is to use
+    - Jacob Nielsen proposes five "usability components"
+      - "Learnability" means easy to learn from the first time
+      - "Efficiency" means quick and efficient to do and flexible to changes in user decision
+      - "Memorability" means remembering and finding what was being done, as users can get distracted
+      - "Errors" means providing solutions to mistakes and addressing them when they happen
+      - "Satisfaction" means being pleasant, enjoyable and even satisfying to use, making users want to do something
+  - "UX goals" can be organized into aspects that are desirable or undesirable to users
+    - Desirable design could be enjoyable, fun, relaxing, satisfying, efficient, intuitive, with the user engaged, motivated, and stimulated
+    - Undesirable design could be slow, confusing, complicated, which makes the users bored, frustrated, and stressed
+  - "UX artifacts" are documents used by design teams to gather, organize and present information throughout the UX process
+    - "User personas" are models/characters portraying a user, and are used during user experience research by product teams to ensure a fit between the designed product and the needs and requirements of end users
+      - User research informs the process of determining the potential types of users
+        - Interviewing customers (at least five people) until there is nothing more to learn
+        - Assumptions about customers can be made once there is a reasonable about of information
+        - Web analytics tools gather quantitative data that indicates how customers behave, and can be used in conjunction with information about why customers behave and what motivates them
+      - Personas can be varied across age group, sociometric position etc.
+      - Developing multiple varied user personas helps ensure a broad product fit
+    - "Persona groups" are collections of similar personas than then become consolidated into "single-user personas"
+      - The contents of this consolidated person can be a fictional name, image, demographic profile, summarizing quote about what matters to them, personal background, mini-biography, psychological profile of user needs, interests, motivaitons and pain points
+    - "User stories" are brief statements/abstracts describing users, user needs/goals, to establish who the user is, what they require and why they require it
+      - Each user persona typically has one user story
+      - The template is "As a `[type of user]`, I want `[a goal]` for `[some reason]`"
+        - Type of user is the end-user or user role
+        - A goal is the action taken by the user
+        - Some reason is the outcome or desired value expected by the user for the action performed
+    - "Scenarios" are situationens depicting user interaction, and they describe the user's motivations for doing the task/goal and a question they need answered, and they suggest possible ways to achieve goals
+      - Essentailly an extension of the user story
+      - Can be divided into "use cases" which describe sequence of user tasks in a provided functionality/path
+      - Aid the design team in imagining the ideal solution to a user problem
+      - "Scenario mapping" is the first step in scenario planning, where designers, developers and product owners meet to discuss ideas and design a plan centered on a user persona, to define a critical task for the user to achieve
+        - This is followed by a scenario analysis, contextualizing user goals and walking through the steps taken by the user
+    - "Storyboards" are visual representations of user interactions with a product, and can be sketches, illustrations, screenshots, slideshows, animations, or live demos
+      - Created by defining the persona, the environment they are in, adn the plot of what they want to achieve
