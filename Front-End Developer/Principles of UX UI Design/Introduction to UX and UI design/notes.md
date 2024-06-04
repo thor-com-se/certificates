@@ -48,6 +48,7 @@
       - Developing multiple varied user personas helps ensure a broad product fit
     - "Persona groups" are collections of similar personas than then become consolidated into "single-user personas"
       - The contents of this consolidated person can be a fictional name, image, demographic profile, summarizing quote about what matters to them, personal background, mini-biography, psychological profile of user needs, interests, motivaitons and pain points
+    - "Empathy maps" consist of 4 quadarants that describe what a persona says, thinks, does and feels
     - "User stories" are brief statements/abstracts describing users, user needs/goals, to establish who the user is, what they require and why they require it
       - Each user persona typically has one user story
       - The template is "As a `[type of user]`, I want `[a goal]` for `[some reason]`"
@@ -63,6 +64,15 @@
     - "Storyboards" are visual representations of user interactions with a product, and can be sketches, illustrations, screenshots, slideshows, animations, or live demos
       - Created by defining the persona, the environment they are in, adn the plot of what they want to achieve
     - "Wireframes" are visual representations of the user interface, primarily concerned with the placement and hierarchy of content and functionalities
+    - "Customer journey maps" illustrate the interaction experience of user research participants
+      - The top describes the participant and their expectations
+        - The "actor" is the persona and point of view for the journey
+        - The "scenario" and "expectations" describe the journey and is associated with the actor's goal or need and expectations
+      - The map in the middle is a table where the columns are sequential actions taken during the interaction and there is a row for each type of communication made by the user (doing, thinking, saying, feeling)
+        - "Journey phases" are the stages (columns)
+        - "Actions", "attitudes", and "emotions" are the actor's behaviors in the stages, ideally direct quotes
+      - The bottom is a description of opportunities and things to do
+        - "Opportunities" are mapping insights into how the user experience can be improved based on the journey map
 - "UI" (User Interface) refers to how people interface or communicate with each other and with products such as email, text messages, or printers
   - Users use interfaces to achieve tasks, such as receiving directions, taking online classes, or ordering food
   - "GUI" (Graphical User Interface) provides a visual interface through a screen for users to communicate with technology, and is often synonymous with "UI" in design
@@ -76,9 +86,9 @@
     - "UX design" (User Experience design) is about interactions between user and a specific touchpoint
     - "UI design" (User Interface design) is about the usability, conversion, look and feel etc. of interfaces
   - "User-centered design" (UCD) is an iterative process that keeps the user centered throughout the process by considering the needs, wants, and limitations of end-users at each stage of the design process
-  - "Design thinking" is a process for solving creative problems consisting of the five phases: emphasize, define, ideate, prototype and test
-    - "Emphasize" means to relate to the problem that is being solved
-    - "Define" means to analyze and synthesize observations into a problem statement of what the user wants and why they want it
-    - "Ideate" means to think about how to solve the problem statement
-    - "Prototype" means a draft of the solution at any level of fidelity
-    - "Test" means involving users with the prototype to test if it solves the problem statement, and then repeating this design cycle with the feedback
+- "Design thinking" is a process for solving creative problems consisting of the five phases: emphasize, define, ideate, prototype and test
+  - "Emphasize" means to relate to the problem that is being solved
+  - "Define" means to analyze and synthesize observations into a problem statement of what the user wants and why they want it
+  - "Ideate" means to think about how to solve the problem statement
+  - "Prototype" means a draft of the solution at any level of fidelity
+  - "Test" means involving users with the prototype to test if it solves the problem statement, and then repeating this design cycle with the feedback
