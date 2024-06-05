@@ -1,0 +1,32 @@
+- Design is subjective but can be evaluated and ideated early on through guidelines and evaluation methods
+  - Dieter Rams' "10 principles of good design"
+    - "Innovative" means should should make a change or do something in a new way, introducing new methods, ideas, products
+    - "Useful" means design should complement and emphasize the usefulness of a product and foremost be functional
+    - "Aesthetic" means design should be joyous and beautiful
+    - "Understandable" means design should communicate its intent and the possibilities for interaction
+    - "Unobtrusive" means design should complement the utility of a product and not be obtrusive to its use
+    - "Honest" means design should be integral and not promise to be something it is not
+    - "Long-lasting" means design should be timeless and users should want to keep it
+    - "Thorough down to the last detail" means design should be thorough as this encourages a culture of quality that comes through in the final product
+    - "Environmentally-friendly" means design should be sustainable so that it can continue to be good in the future
+    - "As little design as possible" means design should provide the most value with the least design, letting the design breathe instead of becoming cluttered
+  - Jacob Nielsen's "heuristic evaluation" is a method for finding usability flaws in a design by judging it relative to known principles for easy-to-use design such as the "usability heuristics"
+    - "Visibility of system status" means design should indicate to the user its state and current operation, such as a computer program that processes and changes state
+    - "Match between the system and the real world" means design should be familiar and based on previous experiences that it is assumed users may have had
+    - "User control and freedom" means design provides a quick way to undo any mistakes
+    - "Consistency and standards" means design should be consistent across an experience
+    - "Error prevention" means design should prevent errors before they happen rather than just providing feedback on errors
+    - "Recognition rather than recall" means design should display information with recognizable intent and now just something the user has to remember or recall, with hints indicating time-sensitivity or process state changes
+    - "Flexibility and efficiency of use" means design should accomodate both new users while also allowing experienced users with shortcuts that make actions quick and efficient
+    - "Aesthetic and minimalistic design" means deisgn is noticed first for its visual appeal and this helps reinforce brand identity and credibility
+    - "Help users recognize, diagnose and recover from errors" means design should provide error communication that is polite, easy to understand, precise, constructive, clearly visible, and brief
+    - "Help and documentation" means design should be useable without documentation but still provide additional information that is easy to find, focused on the user's task and include the steps needed
+  - Ben Schneiderman's "Schneiderman evaluation"/"8 golden rules for interface design"
+    - "Strive for consistency" means design should be consistent as to establish credibility and identity
+    - "Enable frequent users to use shortcuts" means design should enable greater efficiency through optional shortcuts
+    - "Offer informative feedback" means design should provide feedback as soon as possible so users can best understand the system
+    - "Design dialog to yield closure" means design should have a clearly defined and communicated beginning, middle, and end
+    - "Offer simple error handling" means design should eliminate potential errors to the greatest extent, and provide informative feedback and choices when errors are encountered
+    - "Permit easy reversal of actions" means design should make it possible and obvious how to undo an action
+    - "Support internal locus of control" means design should wait for users to initiate actions, and avoid surprises and interruptions, such that users feel free and in control of the system
+    - "Reduce short-term memory load" means design should accomodate user attention spans by preferring recognizable information over recalling information
