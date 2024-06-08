@@ -30,3 +30,19 @@
     - "Permit easy reversal of actions" means design should make it possible and obvious how to undo an action
     - "Support internal locus of control" means design should wait for users to initiate actions, and avoid surprises and interruptions, such that users feel free and in control of the system
     - "Reduce short-term memory load" means design should accomodate user attention spans by preferring recognizable information over recalling information
+- Designing for accessibility enables people with disabilities to interpret, understand, navigate, interact with and contribute to a product
+  - Accessibility guidelines exist for guiding the design direction, such as Section 508 and Web Content Accessibility Guidelines (WCAG) 2.0
+  - Accessibility provides design constraints for guiding accessible design, but it should not be a barrier to innovation or restrict possibilities
+  - Peers should not be used when designing for accessibility, as they are unlikely to be vastly different from the designer
+  - Color is used to convey information about status and intent, but using color alone makes the design inaccessible to colorblind users
+  - The WCAG recommends a constrast ratio between foreground text and background of at least 4.5 to 1 to accomodate for low vision users
+  - Interactive elements should be easily identifiable using distinct styles, and navigatable both with and without a mouse as some users can only use a keyboard
+    - A highlight can be used to indicate which interactive element can currently be interacted with using the keyboard
+  - Forms should have descriptive labels associated with each input field
+  - Navigation across website pages should be consistent and more than one way of navigating can be provided through site search or site maps
+    - Orientation cues such as breadcrumbs and clear headings can help users understand where and why they are on a page
+  - Interaction feedback messages and instructions should be easily visible
+  - Whitespace helps separate content and headings and spacing help group related content
+  - Desinging for different viewport sizes such as mobile phones or zoomed browser windows helps ensure anyone can access the content
+  - Content that automatically plays should provide controls
+- 
