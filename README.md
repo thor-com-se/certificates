@@ -26,6 +26,11 @@
 - [React Basics](https://www.coursera.org/account/accomplishments/records/5BKDSZTH8PMS)
 - [Advanced React](https://www.coursera.org/account/accomplishments/records/T4ENXQ7P4AG4)
 
+<!-- omit in toc -->
+### Repository
+
+[https://github.com/thordotcomputer/certificates/tree/main/Front-End%20Developer](https://github.com/thordotcomputer/certificates/tree/main/Front-End%20Developer)
+
 ## Back-End Developer (Meta)
 
 <!-- omit in toc -->
@@ -43,3 +48,8 @@
 
 - [Introduction to Back-End Development](https://www.coursera.org/account/accomplishments/records/6H3RNVJUP5Q8)
 - [Version Control](https://www.coursera.org/account/accomplishments/records/UXYPSMTYUTAP)
+
+<!-- omit in toc -->
+### Repository
+
+[https://github.com/thordotcomputer/certificates/tree/main/Back-End%20Developer](https://github.com/thordotcomputer/certificates/tree/main/Back-End%20Developer)
