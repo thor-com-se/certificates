@@ -1,0 +1,31 @@
+- "PHP" (Hypertext Preprocessor, originally Personal Home Page) is an open-source server-side scripting language for web development, created in 1994 by Danish-Canadian programmer Rasmus Lerdorf
+    - Enables server-side processing for dynamic and interactive web applications
+    - Vast community and ecosystem
+    - Popular for its ease of learning, readability, huge amount of libraries and frameworks (Laravel, Symfony), and great community support
+    - A stepping stone to full-stack development, as it can integrate with front-end technologies like HTML, CSS, and JavaScript
+    - Backbone of content management systems (CMS) like WordPress
+    - Integrates with databases including MySQL, PostgreSQL, and SQLite
+- The console command `php -S localhost:8080` will start a local PHP development server
+    - The server information can be accessed in a web browser by navigating to "localhost:8080"
+- The basic syntax rules for PHP showcase its simplicity and ease of use
+    - PHP code is enclosed within `<?php` and `?>` tags, where the closing tag is optional in PHP-only files, indicating to the web server where PHP code begins and ends for compilation
+    - `echo "Hello, World!";` can output text or variables as content of the webpage
+    - Single-line comments with `// comment`
+    - Multiline comments with `/* comment */`
+    - Variables are declared with `$name = value;` where value can be string, number, or something else
+        - PHP is loosely typed so no explicit type declaration
+- The advanced syntax rules for PHP cover extended functionality
+    - Data types are inferred from the declaration, such as floating point when a number is declared with a `.` or array when a collection is declared with `array();`
+    - Operators in PHP include arithmetic, assignment, comparison, and logical operators
+        - Arithmetic operators perform actions such as adding values (`$sum = $x + $y`)
+        - Assignment operators perform arithmetic and variable value assignment at once (`$x += $y`)
+        - Comparison operators return a boolean value by comparing two values (`($x == $y)`)
+        - Logical operators such as AND (`&&`) return a boolean value from two comparisons (`($x > 0) && ($y < 0)`)
+    - Conditional statements incude if, elseif, and else
+        - The syntax is `if (condition) { ... } elseif (condition) { ... } else { ... }` where `...` is the code executed based on the conditions
+    - PHP supports loops like for, while, and foreach
+        - For loops are written as `for ($i = 0; $i < 5; $i++) { ... }` which loops from 0 to 4
+        - Foreach loops are written as `foreach ($numbers as $number) { ... }` where `$numbers` is an array variable and `$number` is the value in the current iteration
+    - Functions encapsulate reusable code
+        - Declared as `function functionName($parameter) { ... }`
+        - Called with `functionName(value);`

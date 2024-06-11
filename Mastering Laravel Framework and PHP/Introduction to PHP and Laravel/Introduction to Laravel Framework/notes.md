@@ -1,0 +1,45 @@
+- "Laravel" is an open-source PHP framework for developing web applications following the "MVC" (model-view-controller) architecture pattern, created by Taylor Otwell
+    - Based on the Symfony framework
+    - The MVC pattern separates the data model from the view (user interface) through controllers
+    - Provides a modular packaging system with a dedicated dependency manager
+    - Different ways to access related relational databases
+    - Utilities that help with writing and maintaining code, and syntatic sugar
+    - Includes "Eloquent" which is an "object-relational mapper" (ORM) for interacting with databases
+    - The "Blade templating engine" for creating dynamic web pages is simple and expressvie
+    - Built-in features for authenticating and authorizing access to applications
+        - Includes security features such as password hashing, cross-site scripting (XSS) protection, and SQL injection prevention
+    - Includes "Artisan" command-line interface (CLI) tool for generating code, running commands, and managing applications
+- Laravel setup requires PHP, Composer (dependency manager), a web server (such as Apache or Nginx), and a database (such as MySQL or PostgreSQL)
+    - The project requires a root directory
+    - `composer global require "laravel/installer"` will install laravel globally through Composer
+    - `laravel new project-name` will create a new Laravel project in the root folder
+        - The CLI will prompt for a starter kit, testing framework (PHPUnit can be selected), and Git repository initialization
+    - The "PDO" (PHP Data Objects) extension is commonly required by Laravel for database operations
+- The Laravel project folder contains several folders necessary for the application
+    - "app" folder contains most of the custom code
+        - "Http" folder contains controllers and middleware
+            - "Controllers" folder for handling and processing http requests to return responses
+            - "Middleware" folder provides convenient mechanism for fitlering http request before it enters application
+        - "Providers" folder contains the service providers that bind classes and perform other tasks during application bootstrapping
+        - "Console" folder contains custom Artisan commands for the application
+        - "Exceptions" folder contains custom exception classes for determining errors thrown by custom code
+    - "bootstrap" folder" contains files for bootstrapping the Laravel application
+        - "app.php" initializes the application and loads service providers
+    - "config" folder contains configuration files for Laravel components
+    - "public" folder is the web accessible directory
+        - "index.php" is the main application entry point for incoming requests
+        - "favicon.ico" is the website's favicon
+    - "database" folder includes database migrations and seeds
+        - "migrations" folder contains files related to database migrations
+    - "resources" folder holds views, language files, and other resources
+        - "views" folder contains Blade templtes for the user interface
+    - "routes" folder contains the routes for the application, with specific URLS and corresponding controllers and actions
+    - "storage" folder contains generated files, logs, and runtime data
+    - "tests" folder contains custom application tests
+    - "vendor" folder is where Composer stores the dependencies it manages
+    - ".env" file stores sensitive configuration settings and environment variables
+- The Laravel application structure is intended to be flexible and extensible, and there are general conventions for keeping code maintainable and understandable
+    - Namespaces are used to organize code, making it easier to find and use classes (as these match the logical folder structure)
+    - Keep different types of code (controllers, models, views) in separate directories
+    - Descriptive file names make it easier to identify their purpose
+    - Documenting code makes it easier to maintain and understand
