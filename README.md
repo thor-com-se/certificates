@@ -1,6 +1,7 @@
 <!-- omit in toc -->
 # Professional certificates
 
+- [Mastering Laravel Framework and PHP (Board Infinity)](#mastering-laravel-framework-and-php-board-infinity)
 - [Front-End Developer (Meta)](#front-end-developer-meta)
 - [Back-End Developer (Meta)](#back-end-developer-meta)
 
