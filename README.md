@@ -4,6 +4,31 @@
 - [Front-End Developer (Meta)](#front-end-developer-meta)
 - [Back-End Developer (Meta)](#back-end-developer-meta)
 
+## Mastering Laravel Framework and PHP (Board Infinity)
+
+<!-- omit in toc -->
+### Description
+
+[https://www.coursera.org/learn/laravel-framework-and-php](https://www.coursera.org/learn/laravel-framework-and-php)
+
+<!-- omit in toc -->
+### Certificate
+
+*Not yet issued*
+
+<!-- omit in toc -->
+### Modules
+
+- [Introduction to PHP and Laravel](https://www.coursera.org/learn/laravel-framework-and-php)
+- [Building Web Applications with Laravel](https://www.coursera.org/learn/laravel-framework-and-php)
+- [Integrating PHP with Laravel](https://www.coursera.org/learn/laravel-framework-and-php)
+- [Project Formation Using Laravel](https://www.coursera.org/learn/laravel-framework-and-php)
+
+<!-- omit in toc -->
+### Repository
+
+[https://github.com/thordotcomputer/certificates/tree/main/Mastering%20Laravel%20Framework%20and%20PHP](https://github.com/thordotcomputer/certificates/tree/main/Mastering%20Laravel%20Framework%20and%20PHP)
+
 ## Front-End Developer (Meta)
 
 <!-- omit in toc -->
