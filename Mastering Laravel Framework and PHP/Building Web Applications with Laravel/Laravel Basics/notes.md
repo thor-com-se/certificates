@@ -1,0 +1,56 @@
+- Routing in Laravel matches incoming HTTP requests to specific code in the application
+  - The routing system defines how the application responds to different requests
+  - A Laravel route is defined with the Route class
+    - This class provides methods for different types of routes
+      - `get()` defines a route that responds to HTTP GET requests
+    - A route can be declared as `Route::get('/', function () { return 'Hello, World!' })`
+    - HTML file can be served for a route with `Route::get('/', function () { return view('filename') })` where `filename` is a reference to `/resources/views/filename.blade.php`
+      - This file contains normal HTML markup
+  - `.php` files in the `/routes/` folder are automatically loaded by the route service provider
+    - `web.php` file defines routes for the web interface
+      - Routes are assigned to web middleware group, which provides features like session state and "CSRF" (Cross-Site Request Forgery) protection
+      - Serves all requests for routes hit by a web browser
+    - `api.php` file defines routes that are stateless
+      - Routes are assigned to API middleware group
+      - Acts like a data provider, along with additional middleware functionalities
+      - Authorization and authenticated can be used
+  - Parameters can be passed from the URL of a request to its function, by defining the route as `Route::get('/user/{$parameter}', function ($parameter) { return $parameter })`
+  - Route functionality can be segregated to a controller by referencing it in the method declaration, such as `Route::get('/user/$id', [UserController::class, 'getUser'])`
+  - "Named route" is a route assigned to a name with `Route::get('/user/profile', function () { ... }) -> name('profile')` so that it can be referenced when generating links, redirecting, or when using middleware
+    - This makes the route more maintainable as changes would only need to be handled in one place
+- `php artisan serve` will use Artisan to start a local development server for the Laravel application
+- Controllers in Laravel handle incoming HTTP requests and return responses
+  - `php artisan make:controller ControllerName` will use Artisan to generate a controller file `/app/Http/Controllers/ControllerName.php`
+  - PHP classes containing methods for handling incoming HTTP requests
+    - Each controller method handles a specific type of request, such as GET for `/user` or POST for `/login`
+    - When a request matches a route, Laravel automatically executes the corresponding controller method
+      - The controller method can retrieve data from a database, validate user input, or generate a response
+        - An example could be `function getUser($id) { $user = User::find($id); return view('user.profile', ['user' => $user]) }` for route `Route::get('/user/$id', [UserController::class, 'getUser'])` where `user.profile` references `resources/views/user/profile.blade.php` and `User::find($id)` queries the database
+  - Handling requests can involve retrieving data from a database or validating user input
+  - Using dependency injection will make code for controllers more testable and reusable
+  - Documentation makes code more maintainable and easier to understand
+- Views in Laravel generate the HTML content displayed to users
+  - Works together with controllers that perform necessary tasks before displaying content
+  - Using "view composers" to pass data to views makes it possible to pass the same data to multiple views
+  - Blade templates can be used to generate dynamic HTML pages
+  - Documentation makes code more maintainable and easier to understand
+- Database Migrations and Eloquent ORM work together for managing database schema and interacting with database
+  - Database migrations can create a new table in the database, for which an Eloquent model class can be created for interacting with the table
+    - Migration files should have descriptive names, so migrations are easy to understand
+    - Relationships between database tables should be modeled using Eloquent relationships, so that data retrieval and updates are easy
+    - Eloquent scopes can filter and sort data, for creating easy yet complex queries
+    - Documenting database migrations and Eloquent models makes them easy to understand and maintain
+  - Database migrations are a form of version control for the database schema, as they allow controlled and predictable changes
+    - `php artisan make:migration` will use Artisan to create a new migration file in `/database/migrations/`
+      - Each migration file contains an `up()` method for changing the database scheme and a `down()` method for reversing the change
+      - `php artisan migrate` will use Artisan to execute all pending migrations in `/database/migrations/`
+        - This can generate the mysql database and populate it with data
+          - `php artisan db:seed` will populate the database with demo data defined in `/database/seeders/`
+- Eloquent is an "Object-Relational Mapper" (ORM) included with Laravel, for interacting with a database through PHP objects
+  - Each table in the database should have a corresponding Eloquent model class that inherits from the `Eloquent/Model` class
+    - This is used to interact with the database, through methods such as `all()` for retrieving all records in a table or `find()` for retrieving a specific record by its ID
+    - In the code, the model should be declared as `class ModelName extends Model { use HasFactory; protected $table = 'modelname' }`
+      - A corresponding seeder class can be created with `/database/seeders/modelname.php` that contains a class extending `Seeder` with a `run()` method to populate the table with demo data using `DB::table('modelname') -> insert([item => value])`
+      - `php artisan db:seed --class=modelname` will use Artisan to seed the database using the class
+    - A route will use a controller method that queries a model which defines interactions with the database
+  - Complex tasks can be performed, such as creating and updating records, deleting records, and performing queries
