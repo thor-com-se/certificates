@@ -1,0 +1,27 @@
+- "Middleware" in Laravel acts as a filter/gatekeeper for incoming HTTP requests
+  - Performs actions before or after a request reaches the application's routes or controllers
+  - Defined as classes that inherit from the `Illuminate/Http/Middleware/Middleware` class
+    - Should contain a `handle()` method that will be executed when the middleware is triggered
+      - `use Illuminate/Support/Facades/Log` will add the support package for adding to the generated log, which is stored in `/storage/logs/laravel.log`
+        - `Log::debug('Success')` would add the string `'Success'` to the log
+        - `Log::debug($request -> header())` would add the request headers to the log
+      - The route can be directed to another route with `return redirect('otherRoute')` through a conditional that checks a value in the request headers
+    - Middleware classes can be assigned to routes or groups of routes, and are registered in `/app/Http/Kernel.php`
+      - Middleware groups are divided into `'web' => []` and `'api' => []`
+      - Middleware is registered in `middlewareAliases = []` with `'alias' =>` pointing to the Middleware class, which can be attached to a Route in `/routes/` with `Route -> middleware('alias')`
+    - `php artisan make:middleware MiddlewareName` uses Artisan to create a middleware template file in `/app/Http/Middleware/` 
+  - Commonly used for tasks such as authentication, authorization, caching, logging
+    - Laravel provides built-in middleware for handling user authentication
+      - Used for protecting routes and restricting access based on authentication
+    - Custom middleware can be created to perform specific tasks, such as logging requests or verifying API tokens
+    - Laravel offers authorization logic for controlling access to resources based on user roles and permissions
+    - "Laravel Passport" is an OAuth2 server for issuing API authentication tokens securely
+- The "Blade Templating System" embeds PHP within HTML templates, to create dynamic and data-driven views for web applications
+  - The syntax is straightforward with code such as `{{ $variable }}` to output a value
+    - Conditionals can be declared with `@if` and `@endif`
+    - Control structures can be declared with `@foreach` or `@while`
+    - "Directives" can be declared for common tasks such as `@extends` for extending layouts, `@section` for content sections, and `@yield` for displaying content from sections
+  - "Master layouts" can be created, and then extended in child views, to maintain a consistent structure and design across the application
+  - "Sub-views" and "partials" can be included in main views, to reuse components such as headers, footers, and sidebars
+  - Blade automatically escapes variables to prevent "Cross-Site Scripting" (XSS) attacks
+    - Variables can be unescaped using the `@raw` directive
