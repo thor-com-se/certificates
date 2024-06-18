@@ -11,8 +11,17 @@
       - Middleware is registered in `middlewareAliases = []` with `'alias' =>` pointing to the Middleware class, which can be attached to a Route in `/routes/` with `Route -> middleware('alias')`
     - `php artisan make:middleware MiddlewareName` uses Artisan to create a middleware template file in `/app/Http/Middleware/` 
   - Commonly used for tasks such as authentication, authorization, caching, logging
-    - Laravel provides built-in middleware for handling user authentication
-      - Used for protecting routes and restricting access based on authentication
+    - There are several authentication methods provided by Laravel
+      - "HTTP Basic Authentication" can be used to authenticate users to a REST API
+      - "Form-based Authentication" is a traditional login form for authenticating users
+      - "OAuth 2" allows users to authenticate using third-party services such as Google or Facebook
+    - Middleware works together with autentication in Laravel to authenticate users
+        - Used for protecting routes and restricting access based on authentication
+        - Middleware classes used for authentication should have descriptive names
+        - Multiple middleware classes can be combined to implement complex authentication schemes, such as user credentials authentication combined with two-factor authentication
+    - Authentication in Laravel requires a `guard` class which is responsible for authenticating users. Laravel includes several built-in guards, such as "session guard" and "API guard"
+      - Guards need to be registered in the `auth.php` configuration file, which contains a guard key used to register guards that authenticate users
+      - `auth()` is a method called to use a registered guard
     - Custom middleware can be created to perform specific tasks, such as logging requests or verifying API tokens
     - Laravel offers authorization logic for controlling access to resources based on user roles and permissions
     - "Laravel Passport" is an OAuth2 server for issuing API authentication tokens securely
