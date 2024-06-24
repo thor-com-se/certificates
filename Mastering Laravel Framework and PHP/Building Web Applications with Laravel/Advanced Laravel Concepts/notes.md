@@ -15,22 +15,29 @@
       - "HTTP Basic Authentication" can be used to authenticate users to a REST API
       - "Form-based Authentication" is a traditional login form for authenticating users
       - "OAuth 2" allows users to authenticate using third-party services such as Google or Facebook
-    - Middleware works together with autentication in Laravel to authenticate users
-        - Used for protecting routes and restricting access based on authentication
-        - Middleware classes used for authentication should have descriptive names
-        - Multiple middleware classes can be combined to implement complex authentication schemes, such as user credentials authentication combined with two-factor authentication
-    - Authentication in Laravel requires a `guard` class which is responsible for authenticating users. Laravel includes several built-in guards, such as "session guard" and "API guard"
-      - Guards need to be registered in the `auth.php` configuration file, which contains a guard key used to register guards that authenticate users
-      - `auth()` is a method called to use a registered guard
+      - Middleware works together with autentication in Laravel to authenticate users
+          - Used for protecting routes and restricting access based on authentication
+          - Middleware classes used for authentication should have descriptive names
+          - Multiple middleware classes can be combined to implement complex authentication schemes, such as user credentials authentication combined with two-factor authentication
+      - Authentication in Laravel requires a `guard` class which is responsible for authenticating users. Laravel includes several built-in guards, such as "session guard" and "API guard"
+        - Guards need to be registered in the `auth.php` configuration file, which contains a guard key used to register guards that authenticate users
+        - `auth()` is a method called to use a registered guard
     - Custom middleware can be created to perform specific tasks, such as logging requests or verifying API tokens
     - Laravel offers authorization logic for controlling access to resources based on user roles and permissions
     - "Laravel Passport" is an OAuth2 server for issuing API authentication tokens securely
-- The "Blade Templating System" embeds PHP within HTML templates, to create dynamic and data-driven views for web applications
+- The "Blade Templating System" is a templating engine that embeds PHP within HTML templates, to create dynamic and data-driven views for web applications
+  - Blade templates are PHP files with the `.blade.php` extension, and are typically stored in `resources/views/`
+    - Blade is used through the inclusion of Blade directives in PHP files
+    - Descriptive names should be used for Blade templates, so they are easy to find and use
+    - Templates are more reusable and flexible when they use Blade directives to generate dynamic HTML content
+    - Master templates can be extended by other templates, and are created using Blade layouts
+    - Blade templates should be documented so they are easy to maintain and understand
   - The syntax is straightforward with code such as `{{ $variable }}` to output a value
     - Conditionals can be declared with `@if` and `@endif`
     - Control structures can be declared with `@foreach` or `@while`
-    - "Directives" can be declared for common tasks such as `@extends` for extending layouts, `@section` for content sections, and `@yield` for displaying content from sections
+    - "Directives" can be declared for common tasks such as `@include` for including content from other files, `@extends` for extending existing Blade templates in new layouts, `@section` for content sections, and `@yield` for displaying content from sections
   - "Master layouts" can be created, and then extended in child views, to maintain a consistent structure and design across the application
   - "Sub-views" and "partials" can be included in main views, to reuse components such as headers, footers, and sidebars
   - Blade automatically escapes variables to prevent "Cross-Site Scripting" (XSS) attacks
     - Variables can be unescaped using the `@raw` directive
+- "Laravel Vite" plugin bundles the Laravel project for deployment in a production environment
