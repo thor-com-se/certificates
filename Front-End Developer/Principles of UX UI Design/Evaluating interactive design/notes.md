@@ -45,4 +45,30 @@
   - Whitespace helps separate content and headings and spacing help group related content
   - Desinging for different viewport sizes such as mobile phones or zoomed browser windows helps ensure anyone can access the content
   - Content that automatically plays should provide controls
-- 
+- Form design influences user perception and conversion (from user to customer) of a website
+  - Forms, such as web forms, should facilitate users entering and submitting information
+    - Layout, format, UX, appearance are factors in determining the quality of a form
+    - Form fields should be spaced out using logical grouping, such that it is indentifiable which labels belong to which unique field based on proximity of the label to the field
+  - Best practices for good form design
+    - Use a single-column layout as it is easier to understand
+    - Label the form with a title and description indicating what happens on submit
+    - Sort form fields from simplest to most difficult, as users are more likely to be retained if the easiest steps are presented first
+    - Inline form validation should be used to display error messages below or inside the individual form field
+    - Align text (including queries and labels) to the left, as it reduces time needed to fill out the form
+    - Do not request mandatory phone numbers unless the users would perceive it as necessary
+    - Use form fields that browsers can auto-fill with known data such as first and last name
+    - Forms should be mobile-friendly by fitting to different screen sizes
+    - Error messages should be positive and concise on how to make a correction and should never blame the user
+      - Passwords typically have to consist of a mix of different characters, and an error message should indicate when these criteria are not met
+    - Smart default should be enabled, to use information like user's current location to instantly improve speed of completion process
+    - Progress bars can be used for long forms, to indicate how much remains of the form
+      - Users can see where they are in the flow and go back to review previously filled out form fields
+    - reCAPTCHAs (image questions) should be used in place of CAPTCHAs (text questions) to maintain security while making it easier for users to complete
+    - Keyboard shortcuts should be supported, such as Tab to move the active form field to the following form field
+  - Reusable UI "components" and "design systems" provide a systematic, consistent and aesthetically pleasing user interface
+    - "Design guidelines" reflect the underlying values of the brand
+    - "Design pattern library" is a collection of accepted and widely used design patterns in a central repository
+      - A "pattern" is a recurrence of multiple design elements that collaborate with one another
+    - "UI kit" / "component library" consists of components such as buttons and widgets
+    - "Process design guidelines" is a collection of accepted and widely used patterns such as a design pattern library
+      - Assists designers in interpreting design principles during a task
